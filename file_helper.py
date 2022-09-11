@@ -1,6 +1,6 @@
 from constants import mRNA_GENBANK_FILES
 
-input_folder = "Inputs\\"
+input_folder = "Inputs/"
 
 def file_param_to_file_name(param):
     file_names = {
