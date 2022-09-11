@@ -1,7 +1,7 @@
 import argparse
 import time
 
-from exercise1 import run_exercise_1
+from Ex1 import run_exercise_1
 from file_helper import file_param_to_file_name, generate_output_path
 
 def main():
