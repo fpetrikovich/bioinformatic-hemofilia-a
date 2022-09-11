@@ -1,6 +1,7 @@
 from constants import mRNA_GENBANK_FILES
 
-input_folder = "Inputs/"
+input_folder = "inputs/"
+output_folder = "outputs/"
 
 def file_param_to_file_name(param):
     file_names = {
@@ -9,3 +10,6 @@ def file_param_to_file_name(param):
     }
  
     return input_folder + file_names.get(param, "")
+
+def generate_output_path(filename):
+    return output_folder + filename

@@ -1,32 +1,36 @@
 import argparse
+import time
 
 from exercise1 import run_exercise_1
-from file_helper import file_param_to_file_name
+from file_helper import file_param_to_file_name, generate_output_path
 
 def main():
+    # Get the current time for the output files
+    str_time = time.strftime("%Y%m%d-%H%M%S");
+
     # Parse arguments
     parser = argparse.ArgumentParser(description="Bioinformatics Sequencing")
 
     # Add arguments
-    parser.add_argument('-f', dest='file', required=True)   # Archivo para usar
-    parser.add_argument('-e', dest='exercise', required=True)   # Archivo para usar
-
-    # The following two are if using Python 3.9 and up
-    #parser.add_argument('-v', dest='verbose', action=argparse.BooleanOptionalAction, default=False)  # Verbose, print or not
-    #parser.add_argument('-vv', dest='veryVerbose', action=argparse.BooleanOptionalAction, default=False)  # Verbose, print or not
-
-    # The following are for Python 3.8 and under
-    parser.add_argument('-v', dest='verbose', action='store_true')  # Verbose, print or not
-    parser.add_argument('-vv', dest='veryVerbose', action='store_true')  # Verbose, print or not
+    parser.add_argument('-e', dest='exercise', required=True)   # Ejercicio para correr
+    parser.add_argument('-i', '--input', help='identifier of genbank input file',
+                        type=str, default='1A', required=False)
+    parser.add_argument('-o', '--output', help='name of the output fasta file',
+                        type=str, default='seq_output', required=False)
+    
     args = parser.parse_args()
 
-    file_name = ""
+    input_file = ""
+    output_file = ""
+    item = 0
 
     # Param parsing and setup
     try:
         item = int(args.exercise)
-        if args.file != None:
-            file_name = file_param_to_file_name(str(args.file))
+        if args.input != None and args.output != None:
+            input_file = file_param_to_file_name(str(args.input))
+            output_file = generate_output_path(str(args.output) + "_" + str_time)
+
     except:
         print("[ERROR] Invalid option input")
         exit(0)
@@ -34,7 +38,7 @@ def main():
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
     if item == 1:
-        run_exercise_1(file_name)
+        run_exercise_1(input_file, output_file)
 
 if __name__ == '__main__':
     main()
