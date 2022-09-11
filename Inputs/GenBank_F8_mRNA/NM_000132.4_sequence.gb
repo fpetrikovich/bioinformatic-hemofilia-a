@@ -1,0 +1,796 @@
+LOCUS       NM_000132               9032 bp    mRNA    linear   PRI 17-AUG-2022
+DEFINITION  Homo sapiens coagulation factor VIII (F8), transcript variant 1,
+            mRNA.
+ACCESSION   NM_000132
+VERSION     NM_000132.4
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 9032)
+  AUTHORS   Phasha MN, Soma P, Bester J, Pretorius E and Phulukdaree A.
+  TITLE     Factor XIII-A Val34Leu and Tyr204Phe variants influence clot
+            kinetics in a cohort of South African type 2 diabetes mellitus
+            patients
+  JOURNAL   Gene 834, 146637 (2022)
+   PUBMED   35671883
+  REMARK    GeneRIF: Factor XIII-A Val34Leu and Tyr204Phe variants influence
+            clot kinetics in a cohort of South African type 2 diabetes mellitus
+            patients.
+REFERENCE   2  (bases 1 to 9032)
+  AUTHORS   Meireles MR, Stelmach LH, Bandinelli E and Vieira GF.
+  TITLE     Unveiling the influence of factor VIII physicochemical properties
+            on hemophilia A phenotype through an in silico methodology
+  JOURNAL   Comput Methods Programs Biomed 219, 106768 (2022)
+   PUBMED   35367915
+  REMARK    GeneRIF: Unveiling the influence of factor VIII physicochemical
+            properties on hemophilia A phenotype through an in silico
+            methodology.
+REFERENCE   3  (bases 1 to 9032)
+  AUTHORS   Walker GE, Merlin S, Zanolini D, Vandoni A, Volpe A, Gaidano G,
+            Valente G, Olivero M and Follenzi A.
+  TITLE     Factor VIII as a potential player in cancer pathophysiology
+  JOURNAL   J Thromb Haemost 20 (3), 648-660 (2022)
+   PUBMED   34847278
+  REMARK    GeneRIF: Factor VIII as a potential player in cancer
+            pathophysiology.
+REFERENCE   4  (bases 1 to 9032)
+  AUTHORS   Zhao J, Zhou M, Wang Z, Wu L, Hu Z and Liang D.
+  TITLE     Ectopic Expression of FVIII in HPCs and MSCs Derived from hiPSCs
+            with Site-Specific Integration of ITGA2B Promoter-Driven BDDF8 Gene
+            in Hemophilia A
+  JOURNAL   Int J Mol Sci 23 (2), 623 (2022)
+   PUBMED   35054807
+  REMARK    GeneRIF: Ectopic Expression of FVIII in HPCs and MSCs Derived from
+            hiPSCs with Site-Specific Integration of ITGA2B Promoter-Driven
+            BDDF8 Gene in Hemophilia A.
+            Publication Status: Online-Only
+REFERENCE   5  (bases 1 to 9032)
+  AUTHORS   Susanah S, Raspati H, Sari NM, Rakhmilla LE, Sribudiani Y, Moestopo
+            O, Sinaga P, Idjradinata P and Maskoen AM.
+  TITLE     Serum TNF-alpha Level as a Possible Predictor of Inhibitor Levels
+            in Severe Hemophilia A
+  JOURNAL   Biomed Res Int 2021, 6483490 (2021)
+   PUBMED   34778454
+  REMARK    GeneRIF: Serum TNF-alpha Level as a Possible Predictor of Inhibitor
+            Levels in Severe Hemophilia A.
+            Publication Status: Online-Only
+REFERENCE   6  (bases 1 to 9032)
+  AUTHORS   Konkle,B.A., Huston,H. and Nakaya Fletcher,S.
+  TITLE     Hemophilia A
+  JOURNAL   (in) Adam MP, Everman DB, Mirzaa GM, Pagon RA, Wallace SE, Bean
+            LJH, Gripp KW and Amemiya A (Eds.);
+            GENEREVIEWS((R));
+            (1993)
+   PUBMED   20301578
+REFERENCE   7  (bases 1 to 9032)
+  AUTHORS   Jonsdottir S, Diamond C, Levinson B, Magnusson S, Jensson O and
+            Gitschier J.
+  TITLE     Missense mutations causing mild hemophilia A in Iceland detected by
+            denaturing gradient gel electrophoresis
+  JOURNAL   Hum Mutat 1 (6), 506-508 (1992)
+   PUBMED   1301960
+REFERENCE   8  (bases 1 to 9032)
+  AUTHORS   Diamond C, Kogan S, Levinson B and Gitschier J.
+  TITLE     Amino acid substitutions in conserved domains of factor VIII and
+            related proteins: study of patients with mild and moderately severe
+            hemophilia A
+  JOURNAL   Hum Mutat 1 (3), 248-257 (1992)
+   PUBMED   1301932
+REFERENCE   9  (bases 1 to 9032)
+  AUTHORS   Nafa K, Baudis M, Deburgrave N, Bardin JM, Sultan Y, Kaplan JC and
+            Delpech M.
+  TITLE     A novel mutation (Arg-->Leu in exon 18) in factor VIII gene
+            responsible for moderate hemophilia A
+  JOURNAL   Hum Mutat 1 (1), 77-78 (1992)
+   PUBMED   1301194
+REFERENCE   10 (bases 1 to 9032)
+  AUTHORS   Zucker,M.B., Broekman,M.J. and Kaplan,K.L.
+  TITLE     Factor VIII-related antigen in human blood platelets: localization
+            and release by thrombin and collagen
+  JOURNAL   J Lab Clin Med 94 (5), 675-682 (1979)
+   PUBMED   501196
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from M14113.1, AC109993.4 and
+            BC022513.1.
+            This sequence is a reference standard in the RefSeqGene project.
+            On Feb 24, 2020 this sequence version replaced NM_000132.3.
+            
+            Summary: This gene encodes coagulation factor VIII, which
+            participates in the intrinsic pathway of blood coagulation; factor
+            VIII is a cofactor for factor IXa which, in the presence of Ca+2
+            and phospholipids, converts factor X to the activated form Xa.
+            This gene produces two alternatively spliced transcripts.
+            Transcript variant 1 encodes a large glycoprotein, isoform a, which
+            circulates in plasma and associates with von Willebrand factor in a
+            noncovalent complex. This protein undergoes multiple cleavage
+            events. Transcript variant 2 encodes a putative small protein,
+            isoform b, which consists primarily of the phospholipid binding
+            domain of factor VIIIc. This binding domain is essential for
+            coagulant activity. Defects in this gene results in hemophilia A, a
+            common recessive X-linked coagulation disorder. [provided by
+            RefSeq, Jul 2008].
+            
+            Transcript Variant: This variant (1) consists of 26 exons and
+            encodes the full-length isoform (a).
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: M14113.1, X01179.1 [ECO:0000332]
+            RNAseq introns              :: mixed sample support SAMEA1965299,
+                                           SAMEA1966682 [ECO:0006172]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000360256.9/ ENSP00000353393.4
+            RefSeq Select criteria :: based on manual assertion, conservation,
+                                      expression, longest protein
+            ##RefSeq-Attributes-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-8518              M14113.1           1-8518
+            8519-8519           AC109993.4         150288-150288       c
+            8520-9029           M14113.1           8520-9029
+            9030-9032           BC022513.1         2518-2520
+FEATURES             Location/Qualifiers
+     source          1..9032
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="X"
+                     /map="Xq28"
+     gene            1..9032
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="coagulation factor VIII"
+                     /db_xref="GeneID:2157"
+                     /db_xref="HGNC:HGNC:3546"
+                     /db_xref="MIM:300841"
+     exon            1..314
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     misc_feature    166..168
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="upstream in-frame stop codon"
+     CDS             172..7227
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="isoform a preproprotein is encoded by transcript
+                     variant 1; factor VIII F8B; coagulation factor VIIIc;
+                     antihemophilic factor; coagulation factor VIII,
+                     procoagulant component; coagulation factor VIII C2 domain;
+                     coagulation factor VIII A1 domain"
+                     /codon_start=1
+                     /product="coagulation factor VIII isoform a preproprotein"
+                     /protein_id="NP_000123.1"
+                     /db_xref="CCDS:CCDS35457.1"
+                     /db_xref="GeneID:2157"
+                     /db_xref="HGNC:HGNC:3546"
+                     /db_xref="MIM:300841"
+                     /translation="MQIELSTCFFLCLLRFCFSATRRYYLGAVELSWDYMQSDLGELP
+                     VDARFPPRVPKSFPFNTSVVYKKTLFVEFTDHLFNIAKPRPPWMGLLGPTIQAEVYDT
+                     VVITLKNMASHPVSLHAVGVSYWKASEGAEYDDQTSQREKEDDKVFPGGSHTYVWQVL
+                     KENGPMASDPLCLTYSYLSHVDLVKDLNSGLIGALLVCREGSLAKEKTQTLHKFILLF
+                     AVFDEGKSWHSETKNSLMQDRDAASARAWPKMHTVNGYVNRSLPGLIGCHRKSVYWHV
+                     IGMGTTPEVHSIFLEGHTFLVRNHRQASLEISPITFLTAQTLLMDLGQFLLFCHISSH
+                     QHDGMEAYVKVDSCPEEPQLRMKNNEEAEDYDDDLTDSEMDVVRFDDDNSPSFIQIRS
+                     VAKKHPKTWVHYIAAEEEDWDYAPLVLAPDDRSYKSQYLNNGPQRIGRKYKKVRFMAY
+                     TDETFKTREAIQHESGILGPLLYGEVGDTLLIIFKNQASRPYNIYPHGITDVRPLYSR
+                     RLPKGVKHLKDFPILPGEIFKYKWTVTVEDGPTKSDPRCLTRYYSSFVNMERDLASGL
+                     IGPLLICYKESVDQRGNQIMSDKRNVILFSVFDENRSWYLTENIQRFLPNPAGVQLED
+                     PEFQASNIMHSINGYVFDSLQLSVCLHEVAYWYILSIGAQTDFLSVFFSGYTFKHKMV
+                     YEDTLTLFPFSGETVFMSMENPGLWILGCHNSDFRNRGMTALLKVSSCDKNTGDYYED
+                     SYEDISAYLLSKNNAIEPRSFSQNSRHPSTRQKQFNATTIPENDIEKTDPWFAHRTPM
+                     PKIQNVSSSDLLMLLRQSPTPHGLSLSDLQEAKYETFSDDPSPGAIDSNNSLSEMTHF
+                     RPQLHHSGDMVFTPESGLQLRLNEKLGTTAATELKKLDFKVSSTSNNLISTIPSDNLA
+                     AGTDNTSSLGPPSMPVHYDSQLDTTLFGKKSSPLTESGGPLSLSEENNDSKLLESGLM
+                     NSQESSWGKNVSSTESGRLFKGKRAHGPALLTKDNALFKVSISLLKTNKTSNNSATNR
+                     KTHIDGPSLLIENSPSVWQNILESDTEFKKVTPLIHDRMLMDKNATALRLNHMSNKTT
+                     SSKNMEMVQQKKEGPIPPDAQNPDMSFFKMLFLPESARWIQRTHGKNSLNSGQGPSPK
+                     QLVSLGPEKSVEGQNFLSEKNKVVVGKGEFTKDVGLKEMVFPSSRNLFLTNLDNLHEN
+                     NTHNQEKKIQEEIEKKETLIQENVVLPQIHTVTGTKNFMKNLFLLSTRQNVEGSYDGA
+                     YAPVLQDFRSLNDSTNRTKKHTAHFSKKGEEENLEGLGNQTKQIVEKYACTTRISPNT
+                     SQQNFVTQRSKRALKQFRLPLEETELEKRIIVDDTSTQWSKNMKHLTPSTLTQIDYNE
+                     KEKGAITQSPLSDCLTRSHSIPQANRSPLPIAKVSSFPSIRPIYLTRVLFQDNSSHLP
+                     AASYRKKDSGVQESSHFLQGAKKNNLSLAILTLEMTGDQREVGSLGTSATNSVTYKKV
+                     ENTVLPKPDLPKTSGKVELLPKVHIYQKDLFPTETSNGSPGHLDLVEGSLLQGTEGAI
+                     KWNEANRPGKVPFLRVATESSAKTPSKLLDPLAWDNHYGTQIPKEEWKSQEKSPEKTA
+                     FKKKDTILSLNACESNHAIAAINEGQNKPEIEVTWAKQGRTERLCSQNPPVLKRHQRE
+                     ITRTTLQSDQEEIDYDDTISVEMKKEDFDIYDEDENQSPRSFQKKTRHYFIAAVERLW
+                     DYGMSSSPHVLRNRAQSGSVPQFKKVVFQEFTDGSFTQPLYRGELNEHLGLLGPYIRA
+                     EVEDNIMVTFRNQASRPYSFYSSLISYEEDQRQGAEPRKNFVKPNETKTYFWKVQHHM
+                     APTKDEFDCKAWAYFSDVDLEKDVHSGLIGPLLVCHTNTLNPAHGRQVTVQEFALFFT
+                     IFDETKSWYFTENMERNCRAPCNIQMEDPTFKENYRFHAINGYIMDTLPGLVMAQDQR
+                     IRWYLLSMGSNENIHSIHFSGHVFTVRKKEEYKMALYNLYPGVFETVEMLPSKAGIWR
+                     VECLIGEHLHAGMSTLFLVYSNKCQTPLGMASGHIRDFQITASGQYGQWAPKLARLHY
+                     SGSINAWSTKEPFSWIKVDLLAPMIIHGIKTQGARQKFSSLYISQFIIMYSLDGKKWQ
+                     TYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDL
+                     NSCSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEW
+                     LQVDFQKTMKVTGVTTQGVKSLLTSMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQ
+                     DSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCEAQDLY"
+     sig_peptide     172..228
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="COORDINATES: ab initio prediction:SignalP:4.0"
+     mat_peptide     229..7224
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /product="Coagulation factor VIII. /id=PRO_0000002967"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1)"
+     mat_peptide     229..4167
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /product="Factor VIIIa heavy chain, 200 kDa isoform.
+                     /id=PRO_0000002968"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1)"
+     mat_peptide     229..2448
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /product="Factor VIIIa heavy chain, 92 kDa isoform.
+                     /id=PRO_0000002969"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1)"
+     misc_feature    349..351
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    943..945
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    1264..1266
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977,
+                     ECO:0000269|PubMed:1554716; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); sulfatation site"
+     misc_feature    1342..1347
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Cleavage, by thrombin; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); cleavage site"
+     misc_feature    1972..1974
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000269|PubMed:16335952; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    2380..2382
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); sulfatation site"
+     misc_feature    2383..2385
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); sulfatation site"
+     misc_feature    2395..2397
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); sulfatation site"
+     misc_feature    2446..2451
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Cleavage, by thrombin; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); cleavage site"
+     misc_feature    2449..5172
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1);
+                     Region: B"
+     mat_peptide     2449..4167
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /product="Factor VIII B chain. /id=PRO_0000002970"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1)"
+     misc_feature    2497..2499
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    2578..2580
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    2710..2712
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    2887..2955
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    2926..2928
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    2992..3054
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    3055..3057
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3115..3117
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3229..3231
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3241..3243
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3391..3393
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3424..3426
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3781..3783
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    3991..3993
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    4003..4005
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    4072..4074
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    4126..4128
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    4165..4170
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Cleavage (activation); propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); cleavage site"
+     misc_feature    4462..4464
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    4552..4554
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    5170..5175
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Cleavage (activation); propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); cleavage site"
+     mat_peptide     5173..7224
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /product="Factor VIIIa light chain. /id=PRO_0000002971"
+                     /note="propagated from UniProtKB/Swiss-Prot (P00451.1)"
+     misc_feature    5218..5220
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977,
+                     ECO:0000269|PubMed:1554716; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); sulfatation site"
+     misc_feature    5266..5268
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Sulfotyrosine.
+                     /evidence=ECO:0000269|PubMed:10368977,
+                     ECO:0000269|PubMed:1554716, ECO:0000269|PubMed:1898735;
+                     propagated from UniProtKB/Swiss-Prot (P00451.1);
+                     sulfatation site"
+     misc_feature    5293..5298
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Cleavage, by thrombin; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); cleavage site"
+     misc_feature    5656..5658
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     misc_feature    6580..6582
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P00451.1); glycosylation site"
+     exon            315..436
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            437..559
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            560..772
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            773..841
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            842..958
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            959..1180
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1181..1442
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1443..1614
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1615..1708
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1709..1923
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1924..2074
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            2075..2284
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            2285..5390
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            5391..5544
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            5545..5757
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            5758..5986
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            5987..6169
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6170..6286
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6287..6358
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6359..6444
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6445..6600
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6601..6745
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6746..6894
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            6895..7071
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            7072..9032
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      9010..9015
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="hexamer: AATAAA"
+     polyA_site      9032
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="major polyA site"
+ORIGIN      
+        1 gcttagtgct gagcacatcc agtgggtaaa gttccttaaa atgctctgca aagaaattgg
+       61 gacttttcat taaatcagaa attttacttt tttcccctcc tgggagctaa agatatttta
+      121 gagaagaatt aaccttttgc ttctccagtt gaacatttgt agcaataagt catgcaaata
+      181 gagctctcca cctgcttctt tctgtgcctt ttgcgattct gctttagtgc caccagaaga
+      241 tactacctgg gtgcagtgga actgtcatgg gactatatgc aaagtgatct cggtgagctg
+      301 cctgtggacg caagatttcc tcctagagtg ccaaaatctt ttccattcaa cacctcagtc
+      361 gtgtacaaaa agactctgtt tgtagaattc acggatcacc ttttcaacat cgctaagcca
+      421 aggccaccct ggatgggtct gctaggtcct accatccagg ctgaggttta tgatacagtg
+      481 gtcattacac ttaagaacat ggcttcccat cctgtcagtc ttcatgctgt tggtgtatcc
+      541 tactggaaag cttctgaggg agctgaatat gatgatcaga ccagtcaaag ggagaaagaa
+      601 gatgataaag tcttccctgg tggaagccat acatatgtct ggcaggtcct gaaagagaat
+      661 ggtccaatgg cctctgaccc actgtgcctt acctactcat atctttctca tgtggacctg
+      721 gtaaaagact tgaattcagg cctcattgga gccctactag tatgtagaga agggagtctg
+      781 gccaaggaaa agacacagac cttgcacaaa tttatactac tttttgctgt atttgatgaa
+      841 gggaaaagtt ggcactcaga aacaaagaac tccttgatgc aggataggga tgctgcatct
+      901 gctcgggcct ggcctaaaat gcacacagtc aatggttatg taaacaggtc tctgccaggt
+      961 ctgattggat gccacaggaa atcagtctat tggcatgtga ttggaatggg caccactcct
+     1021 gaagtgcact caatattcct cgaaggtcac acatttcttg tgaggaacca tcgccaggcg
+     1081 tccttggaaa tctcgccaat aactttcctt actgctcaaa cactcttgat ggaccttgga
+     1141 cagtttctac tgttttgtca tatctcttcc caccaacatg atggcatgga agcttatgtc
+     1201 aaagtagaca gctgtccaga ggaaccccaa ctacgaatga aaaataatga agaagcggaa
+     1261 gactatgatg atgatcttac tgattctgaa atggatgtgg tcaggtttga tgatgacaac
+     1321 tctccttcct ttatccaaat tcgctcagtt gccaagaagc atcctaaaac ttgggtacat
+     1381 tacattgctg ctgaagagga ggactgggac tatgctccct tagtcctcgc ccccgatgac
+     1441 agaagttata aaagtcaata tttgaacaat ggccctcagc ggattggtag gaagtacaaa
+     1501 aaagtccgat ttatggcata cacagatgaa acctttaaga ctcgtgaagc tattcagcat
+     1561 gaatcaggaa tcttgggacc tttactttat ggggaagttg gagacacact gttgattata
+     1621 tttaagaatc aagcaagcag accatataac atctaccctc acggaatcac tgatgtccgt
+     1681 cctttgtatt caaggagatt accaaaaggt gtaaaacatt tgaaggattt tccaattctg
+     1741 ccaggagaaa tattcaaata taaatggaca gtgactgtag aagatgggcc aactaaatca
+     1801 gatcctcggt gcctgacccg ctattactct agtttcgtta atatggagag agatctagct
+     1861 tcaggactca ttggccctct cctcatctgc tacaaagaat ctgtagatca aagaggaaac
+     1921 cagataatgt cagacaagag gaatgtcatc ctgttttctg tatttgatga gaaccgaagc
+     1981 tggtacctca cagagaatat acaacgcttt ctccccaatc cagctggagt gcagcttgag
+     2041 gatccagagt tccaagcctc caacatcatg cacagcatca atggctatgt ttttgatagt
+     2101 ttgcagttgt cagtttgttt gcatgaggtg gcatactggt acattctaag cattggagca
+     2161 cagactgact tcctttctgt cttcttctct ggatatacct tcaaacacaa aatggtctat
+     2221 gaagacacac tcaccctatt cccattctca ggagaaactg tcttcatgtc gatggaaaac
+     2281 ccaggtctat ggattctggg gtgccacaac tcagactttc ggaacagagg catgaccgcc
+     2341 ttactgaagg tttctagttg tgacaagaac actggtgatt attacgagga cagttatgaa
+     2401 gatatttcag catacttgct gagtaaaaac aatgccattg aaccaagaag cttctcccag
+     2461 aattcaagac accctagcac taggcaaaag caatttaatg ccaccacaat tccagaaaat
+     2521 gacatagaga agactgaccc ttggtttgca cacagaacac ctatgcctaa aatacaaaat
+     2581 gtctcctcta gtgatttgtt gatgctcttg cgacagagtc ctactccaca tgggctatcc
+     2641 ttatctgatc tccaagaagc caaatatgag actttttctg atgatccatc acctggagca
+     2701 atagacagta ataacagcct gtctgaaatg acacacttca ggccacagct ccatcacagt
+     2761 ggggacatgg tatttacccc tgagtcaggc ctccaattaa gattaaatga gaaactgggg
+     2821 acaactgcag caacagagtt gaagaaactt gatttcaaag tttctagtac atcaaataat
+     2881 ctgatttcaa caattccatc agacaatttg gcagcaggta ctgataatac aagttcctta
+     2941 ggacccccaa gtatgccagt tcattatgat agtcaattag ataccactct atttggcaaa
+     3001 aagtcatctc cccttactga gtctggtgga cctctgagct tgagtgaaga aaataatgat
+     3061 tcaaagttgt tagaatcagg tttaatgaat agccaagaaa gttcatgggg aaaaaatgta
+     3121 tcgtcaacag agagtggtag gttatttaaa gggaaaagag ctcatggacc tgctttgttg
+     3181 actaaagata atgccttatt caaagttagc atctctttgt taaagacaaa caaaacttcc
+     3241 aataattcag caactaatag aaagactcac attgatggcc catcattatt aattgagaat
+     3301 agtccatcag tctggcaaaa tatattagaa agtgacactg agtttaaaaa agtgacacct
+     3361 ttgattcatg acagaatgct tatggacaaa aatgctacag ctttgaggct aaatcatatg
+     3421 tcaaataaaa ctacttcatc aaaaaacatg gaaatggtcc aacagaaaaa agagggcccc
+     3481 attccaccag atgcacaaaa tccagatatg tcgttcttta agatgctatt cttgccagaa
+     3541 tcagcaaggt ggatacaaag gactcatgga aagaactctc tgaactctgg gcaaggcccc
+     3601 agtccaaagc aattagtatc cttaggacca gaaaaatctg tggaaggtca gaatttcttg
+     3661 tctgagaaaa acaaagtggt agtaggaaag ggtgaattta caaaggacgt aggactcaaa
+     3721 gagatggttt ttccaagcag cagaaaccta tttcttacta acttggataa tttacatgaa
+     3781 aataatacac acaatcaaga aaaaaaaatt caggaagaaa tagaaaagaa ggaaacatta
+     3841 atccaagaga atgtagtttt gcctcagata catacagtga ctggcactaa gaatttcatg
+     3901 aagaaccttt tcttactgag cactaggcaa aatgtagaag gttcatatga cggggcatat
+     3961 gctccagtac ttcaagattt taggtcatta aatgattcaa caaatagaac aaagaaacac
+     4021 acagctcatt tctcaaaaaa aggggaggaa gaaaacttgg aaggcttggg aaatcaaacc
+     4081 aagcaaattg tagagaaata tgcatgcacc acaaggatat ctcctaatac aagccagcag
+     4141 aattttgtca cgcaacgtag taagagagct ttgaaacaat tcagactccc actagaagaa
+     4201 acagaacttg aaaaaaggat aattgtggat gacacctcaa cccagtggtc caaaaacatg
+     4261 aaacatttga ccccgagcac cctcacacag atagactaca atgagaagga gaaaggggcc
+     4321 attactcagt ctcccttatc agattgcctt acgaggagtc atagcatccc tcaagcaaat
+     4381 agatctccat tacccattgc aaaggtatca tcatttccat ctattagacc tatatatctg
+     4441 accagggtcc tattccaaga caactcttct catcttccag cagcatctta tagaaagaaa
+     4501 gattctgggg tccaagaaag cagtcatttc ttacaaggag ccaaaaaaaa taacctttct
+     4561 ttagccattc taaccttgga gatgactggt gatcaaagag aggttggctc cctggggaca
+     4621 agtgccacaa attcagtcac atacaagaaa gttgagaaca ctgttctccc gaaaccagac
+     4681 ttgcccaaaa catctggcaa agttgaattg cttccaaaag ttcacattta tcagaaggac
+     4741 ctattcccta cggaaactag caatgggtct cctggccatc tggatctcgt ggaagggagc
+     4801 cttcttcagg gaacagaggg agcgattaag tggaatgaag caaacagacc tggaaaagtt
+     4861 ccctttctga gagtagcaac agaaagctct gcaaagactc cctccaagct attggatcct
+     4921 cttgcttggg ataaccacta tggtactcag ataccaaaag aagagtggaa atcccaagag
+     4981 aagtcaccag aaaaaacagc ttttaagaaa aaggatacca ttttgtccct gaacgcttgt
+     5041 gaaagcaatc atgcaatagc agcaataaat gagggacaaa ataagcccga aatagaagtc
+     5101 acctgggcaa agcaaggtag gactgaaagg ctgtgctctc aaaacccacc agtcttgaaa
+     5161 cgccatcaac gggaaataac tcgtactact cttcagtcag atcaagagga aattgactat
+     5221 gatgatacca tatcagttga aatgaagaag gaagattttg acatttatga tgaggatgaa
+     5281 aatcagagcc cccgcagctt tcaaaagaaa acacgacact attttattgc tgcagtggag
+     5341 aggctctggg attatgggat gagtagctcc ccacatgttc taagaaacag ggctcagagt
+     5401 ggcagtgtcc ctcagttcaa gaaagttgtt ttccaggaat ttactgatgg ctcctttact
+     5461 cagcccttat accgtggaga actaaatgaa catttgggac tcctggggcc atatataaga
+     5521 gcagaagttg aagataatat catggtaact ttcagaaatc aggcctctcg tccctattcc
+     5581 ttctattcta gccttatttc ttatgaggaa gatcagaggc aaggagcaga acctagaaaa
+     5641 aactttgtca agcctaatga aaccaaaact tacttttgga aagtgcaaca tcatatggca
+     5701 cccactaaag atgagtttga ctgcaaagcc tgggcttatt tctctgatgt tgacctggaa
+     5761 aaagatgtgc actcaggcct gattggaccc cttctggtct gccacactaa cacactgaac
+     5821 cctgctcatg ggagacaagt gacagtacag gaatttgctc tgtttttcac catctttgat
+     5881 gagaccaaaa gctggtactt cactgaaaat atggaaagaa actgcagggc tccctgcaat
+     5941 atccagatgg aagatcccac ttttaaagag aattatcgct tccatgcaat caatggctac
+     6001 ataatggata cactacctgg cttagtaatg gctcaggatc aaaggattcg atggtatctg
+     6061 ctcagcatgg gcagcaatga aaacatccat tctattcatt tcagtggaca tgtgttcact
+     6121 gtacgaaaaa aagaggagta taaaatggca ctgtacaatc tctatccagg tgtttttgag
+     6181 acagtggaaa tgttaccatc caaagctgga atttggcggg tggaatgcct tattggcgag
+     6241 catctacatg ctgggatgag cacacttttt ctggtgtaca gcaataagtg tcagactccc
+     6301 ctgggaatgg cttctggaca cattagagat tttcagatta cagcttcagg acaatatgga
+     6361 cagtgggccc caaagctggc cagacttcat tattccggat caatcaatgc ctggagcacc
+     6421 aaggagccct tttcttggat caaggtggat ctgttggcac caatgattat tcacggcatc
+     6481 aagacccagg gtgcccgtca gaagttctcc agcctctaca tctctcagtt tatcatcatg
+     6541 tatagtcttg atgggaagaa gtggcagact tatcgaggaa attccactgg aaccttaatg
+     6601 gtcttctttg gcaatgtgga ttcatctggg ataaaacaca atatttttaa ccctccaatt
+     6661 attgctcgat acatccgttt gcacccaact cattatagca ttcgcagcac tcttcgcatg
+     6721 gagttgatgg gctgtgattt aaatagttgc agcatgccat tgggaatgga gagtaaagca
+     6781 atatcagatg cacagattac tgcttcatcc tactttacca atatgtttgc cacctggtct
+     6841 ccttcaaaag ctcgacttca cctccaaggg aggagtaatg cctggagacc tcaggtgaat
+     6901 aatccaaaag agtggctgca agtggacttc cagaagacaa tgaaagtcac aggagtaact
+     6961 actcagggag taaaatctct gcttaccagc atgtatgtga aggagttcct catctccagc
+     7021 agtcaagatg gccatcagtg gactctcttt tttcagaatg gcaaagtaaa ggtttttcag
+     7081 ggaaatcaag actccttcac acctgtggtg aactctctag acccaccgtt actgactcgc
+     7141 taccttcgaa ttcaccccca gagttgggtg caccagattg ccctgaggat ggaggttctg
+     7201 ggctgcgagg cacaggacct ctactgaggg tggccactgc agcacctgcc actgccgtca
+     7261 cctctccctc ctcagctcca gggcagtgtc cctccctggc ttgccttcta cctttgtgct
+     7321 aaatcctagc agacactgcc ttgaagcctc ctgaattaac tatcatcagt cctgcatttc
+     7381 tttggtgggg ggccaggagg gtgcatccaa tttaacttaa ctcttaccta ttttctgcag
+     7441 ctgctcccag attactcctt ccttccaata taactaggca aaaagaagtg aggagaaacc
+     7501 tgcatgaaag cattcttccc tgaaaagtta ggcctctcag agtcaccact tcctctgttg
+     7561 tagaaaaact atgtgatgaa actttgaaaa agatatttat gatgttaaca tttcaggtta
+     7621 agcctcatac gtttaaaata aaactctcag ttgtttatta tcctgatcaa gcatggaaca
+     7681 aagcatgttt caggatcaga tcaatacaat cttggagtca aaaggcaaat catttggaca
+     7741 atctgcaaaa tggagagaat acaataacta ctacagtaaa gtctgtttct gcttccttac
+     7801 acatagatat aattatgtta tttagtcatt atgaggggca cattcttatc tccaaaacta
+     7861 gcattcttaa actgagaatt atagatgggg ttcaagaatc cctaagtccc ctgaaattat
+     7921 ataaggcatt ctgtataaat gcaaatgtgc atttttctga cgagtgtcca tagatataaa
+     7981 gccatttggt cttaattctg accaataaaa aaataagtca ggaggatgca attgttgaaa
+     8041 gctttgaaat aaaataacaa tgtcttcttg aaatttgtga tggccaagaa agaaaatgat
+     8101 gatgacatta ggcttctaaa ggacatacat ttaatatttc tgtggaaata tgaggaaaat
+     8161 ccatggttat ctgagatagg agatacaaac tttgtaattc taataatgca ctcagtttac
+     8221 tctctccctc tactaatttc ctgctgaaaa taacacaaca aaaatgtaac aggggaaatt
+     8281 atataccgtg actgaaaact agagtcctac ttacatagtt gaaatatcaa ggaggtcaga
+     8341 agaaaattgg actggtgaaa acagaaaaaa cactccagtc tgccatatca ccacacaata
+     8401 ggatccccct tcttgccctc cacccccata agattgtgaa gggtttactg ctccttccat
+     8461 ctgcctgacc ccttcactat gactacacag aatctcctga tagtaaaggg ggctggagac
+     8521 aaggataagt tatagagcag ttggaggaag catccaaaga ttgcaaccca gggcaaatgg
+     8581 aaaacaggag atcctaatat gaaagaaaaa tggatcccaa tctgagaaaa ggcaaaagaa
+     8641 tggctacttt tttctatgct ggagtatttt ctaataatcc tgcttgaccc ttatctgacc
+     8701 tctttggaaa ctataacata gctgtcacag tatagtcaca atccacaaat gatgcaggtg
+     8761 caaatggttt atagccctgt gaagttctta aagtttagag gctaacttac agaaatgaat
+     8821 aagttgtttt gttttatagc ccggtagagg agttaacccc aaaggtgata tggttttatt
+     8881 tcctgttatg tttaacttga taatcttatt ttggcattct tttcccattg actatataca
+     8941 tctctatttc tcaaatgttc atggaactag ctcttttatt ttcctgctgg tttcttcagt
+     9001 aatgagttaa ataaaacatt gacacataca aa
+//
+
