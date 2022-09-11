@@ -15,8 +15,8 @@ def main():
     parser.add_argument('-e', dest='exercise', required=True)   # Ejercicio para correr
     parser.add_argument('-i', '--input', help='identifier of genbank input file',
                         type=str, default='1A', required=False)
-    parser.add_argument('-o', '--output', help='name of the output fasta file',
-                        type=str, default='seq_output', required=False)
+    parser.add_argument('-o', '--output', help='name of the output file',
+                        type=str, default='output', required=False)
     
     args = parser.parse_args()
 
@@ -38,7 +38,9 @@ def main():
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
     if item == 1:
-        run_exercise_1(input_file, output_file)
+        nucleotide_file = output_file + '_nucleotides.fasta'
+        proteins_file = output_file + '_proteins.fasta'
+        run_exercise_1(input_file, nucleotide_file, proteins_file)
 
 if __name__ == '__main__':
     main()
