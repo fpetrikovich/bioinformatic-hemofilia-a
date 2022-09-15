@@ -15,8 +15,6 @@ def main():
     parser.add_argument('-e', dest='exercise', required=True)   # Ejercicio para correr
     parser.add_argument('-i', '--input', help='identifier of genbank input file',
                         type=str, default='1A', required=False)
-    parser.add_argument('-o', '--output', help='name of the output file',
-                        type=str, default='output', required=False)
     
     args = parser.parse_args()
 
@@ -27,9 +25,9 @@ def main():
     # Param parsing and setup
     try:
         item = int(args.exercise)
-        if args.input != None and args.output != None:
+        if args.input != None:
             input_file = file_param_to_file_name(str(args.input))
-            output_file = generate_output_path(str(args.output) + "_" + str_time)
+            output_file = generate_output_path(str(args.input) + "_" + str_time)
 
     except:
         print("[ERROR] Invalid option input")

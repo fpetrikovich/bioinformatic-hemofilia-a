@@ -1,0 +1,265 @@
+LOCUS       NM_019863               2616 bp    mRNA    linear   PRI 20-AUG-2022
+DEFINITION  Homo sapiens coagulation factor VIII (F8), transcript variant 2,
+            mRNA.
+ACCESSION   NM_019863
+VERSION     NM_019863.3
+KEYWORDS    RefSeq.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 2616)
+  AUTHORS   Phasha MN, Soma P, Bester J, Pretorius E and Phulukdaree A.
+  TITLE     Factor XIII-A Val34Leu and Tyr204Phe variants influence clot
+            kinetics in a cohort of South African type 2 diabetes mellitus
+            patients
+  JOURNAL   Gene 834, 146637 (2022)
+   PUBMED   35671883
+  REMARK    GeneRIF: Factor XIII-A Val34Leu and Tyr204Phe variants influence
+            clot kinetics in a cohort of South African type 2 diabetes mellitus
+            patients.
+REFERENCE   2  (bases 1 to 2616)
+  AUTHORS   Meireles MR, Stelmach LH, Bandinelli E and Vieira GF.
+  TITLE     Unveiling the influence of factor VIII physicochemical properties
+            on hemophilia A phenotype through an in silico methodology
+  JOURNAL   Comput Methods Programs Biomed 219, 106768 (2022)
+   PUBMED   35367915
+  REMARK    GeneRIF: Unveiling the influence of factor VIII physicochemical
+            properties on hemophilia A phenotype through an in silico
+            methodology.
+REFERENCE   3  (bases 1 to 2616)
+  AUTHORS   Walker GE, Merlin S, Zanolini D, Vandoni A, Volpe A, Gaidano G,
+            Valente G, Olivero M and Follenzi A.
+  TITLE     Factor VIII as a potential player in cancer pathophysiology
+  JOURNAL   J Thromb Haemost 20 (3), 648-660 (2022)
+   PUBMED   34847278
+  REMARK    GeneRIF: Factor VIII as a potential player in cancer
+            pathophysiology.
+REFERENCE   4  (bases 1 to 2616)
+  AUTHORS   Zhao J, Zhou M, Wang Z, Wu L, Hu Z and Liang D.
+  TITLE     Ectopic Expression of FVIII in HPCs and MSCs Derived from hiPSCs
+            with Site-Specific Integration of ITGA2B Promoter-Driven BDDF8 Gene
+            in Hemophilia A
+  JOURNAL   Int J Mol Sci 23 (2), 623 (2022)
+   PUBMED   35054807
+  REMARK    GeneRIF: Ectopic Expression of FVIII in HPCs and MSCs Derived from
+            hiPSCs with Site-Specific Integration of ITGA2B Promoter-Driven
+            BDDF8 Gene in Hemophilia A.
+            Publication Status: Online-Only
+REFERENCE   5  (bases 1 to 2616)
+  AUTHORS   Susanah S, Raspati H, Sari NM, Rakhmilla LE, Sribudiani Y, Moestopo
+            O, Sinaga P, Idjradinata P and Maskoen AM.
+  TITLE     Serum TNF-alpha Level as a Possible Predictor of Inhibitor Levels
+            in Severe Hemophilia A
+  JOURNAL   Biomed Res Int 2021, 6483490 (2021)
+   PUBMED   34778454
+  REMARK    GeneRIF: Serum TNF-alpha Level as a Possible Predictor of Inhibitor
+            Levels in Severe Hemophilia A.
+            Publication Status: Online-Only
+REFERENCE   6  (bases 1 to 2616)
+  AUTHORS   Konkle,B.A., Huston,H. and Nakaya Fletcher,S.
+  TITLE     Hemophilia A
+  JOURNAL   (in) Adam MP, Everman DB, Mirzaa GM, Pagon RA, Wallace SE, Bean
+            LJH, Gripp KW and Amemiya A (Eds.);
+            GENEREVIEWS((R));
+            (1993)
+   PUBMED   20301578
+REFERENCE   7  (bases 1 to 2616)
+  AUTHORS   Jonsdottir S, Diamond C, Levinson B, Magnusson S, Jensson O and
+            Gitschier J.
+  TITLE     Missense mutations causing mild hemophilia A in Iceland detected by
+            denaturing gradient gel electrophoresis
+  JOURNAL   Hum Mutat 1 (6), 506-508 (1992)
+   PUBMED   1301960
+REFERENCE   8  (bases 1 to 2616)
+  AUTHORS   Diamond C, Kogan S, Levinson B and Gitschier J.
+  TITLE     Amino acid substitutions in conserved domains of factor VIII and
+            related proteins: study of patients with mild and moderately severe
+            hemophilia A
+  JOURNAL   Hum Mutat 1 (3), 248-257 (1992)
+   PUBMED   1301932
+REFERENCE   9  (bases 1 to 2616)
+  AUTHORS   Nafa K, Baudis M, Deburgrave N, Bardin JM, Sultan Y, Kaplan JC and
+            Delpech M.
+  TITLE     A novel mutation (Arg-->Leu in exon 18) in factor VIII gene
+            responsible for moderate hemophilia A
+  JOURNAL   Hum Mutat 1 (1), 77-78 (1992)
+   PUBMED   1301194
+REFERENCE   10 (bases 1 to 2616)
+  AUTHORS   Zucker,M.B., Broekman,M.J. and Kaplan,K.L.
+  TITLE     Factor VIII-related antigen in human blood platelets: localization
+            and release by thrombin and collagen
+  JOURNAL   J Lab Clin Med 94 (5), 675-682 (1979)
+   PUBMED   501196
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from BX842559.3 and AC109993.4.
+            On Aug 14, 2020 this sequence version replaced NM_019863.2.
+            
+            Summary: This gene encodes coagulation factor VIII, which
+            participates in the intrinsic pathway of blood coagulation; factor
+            VIII is a cofactor for factor IXa which, in the presence of Ca+2
+            and phospholipids, converts factor X to the activated form Xa.
+            This gene produces two alternatively spliced transcripts.
+            Transcript variant 1 encodes a large glycoprotein, isoform a, which
+            circulates in plasma and associates with von Willebrand factor in a
+            noncovalent complex. This protein undergoes multiple cleavage
+            events. Transcript variant 2 encodes a putative small protein,
+            isoform b, which consists primarily of the phospholipid binding
+            domain of factor VIIIc. This binding domain is essential for
+            coagulant activity. Defects in this gene results in hemophilia A, a
+            common recessive X-linked coagulation disorder. [provided by
+            RefSeq, Jul 2008].
+            
+            Transcript Variant: This variant (2) contains an unique 5' exon
+            located within intron 22 of transcript variant 1. This exon codes
+            for eight amino acids and is spliced to exons 23-26 maintaining the
+            reading frame. The resulting isoform (b) is considerably shorter
+            compared to isoform a, and includes the phospholipid binding
+            domain.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: BC064380.1, M90707.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMEA1965299, SAMEA1968540
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-184               BX842559.3         23618-23801         c
+            185-329             AC109993.4         177066-177210       c
+            330-478             AC109993.4         175701-175849       c
+            479-655             AC109993.4         174415-174591       c
+            656-2616            AC109993.4         149775-151735       c
+FEATURES             Location/Qualifiers
+     source          1..2616
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="X"
+                     /map="Xq28"
+     gene            1..2616
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="coagulation factor VIII"
+                     /db_xref="GeneID:2157"
+                     /db_xref="HGNC:HGNC:3546"
+                     /db_xref="MIM:300841"
+     exon            1..184
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     CDS             161..811
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="isoform b is encoded by transcript variant 2;
+                     factor VIII F8B; coagulation factor VIIIc; antihemophilic
+                     factor; coagulation factor VIII, procoagulant component;
+                     coagulation factor VIII C2 domain; coagulation factor VIII
+                     A1 domain"
+                     /codon_start=1
+                     /product="coagulation factor VIII isoform b"
+                     /protein_id="NP_063916.1"
+                     /db_xref="CCDS:CCDS44026.1"
+                     /db_xref="GeneID:2157"
+                     /db_xref="HGNC:HGNC:3546"
+                     /db_xref="MIM:300841"
+                     /translation="MRIQDPGKVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRS
+                     TLRMELMGCDLNSCSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNA
+                     WRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLTSMYVKEFLISSSQDGHQWTLFFQ
+                     NGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCEAQDLY"
+     misc_feature    161..184
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Region: region encoded by the alternative exon"
+     misc_feature    329..808
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="Region: phospholipid binding domain"
+     exon            185..329
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            330..478
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            479..655
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     exon            656..2616
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      2594..2599
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="hexamer: AATAAA"
+     polyA_site      2616
+                     /gene="F8"
+                     /gene_synonym="AHF; DXS1253E; F8B; F8C; FVIII; HEMA;
+                     THPH13"
+                     /note="major polyA site"
+ORIGIN      
+        1 ggggcgacgt gccctgcgtc cccctcggcg ggctgccgcc gtgcccgcgc cggctcccca
+       61 gcccgagcct gccccttgcc ctgatgaggt gcaaagagcg ggatcggagg cggggcctgg
+      121 ccgggctgtg agcggcgtat gcaaatcgag ggtctcgggg atgcggatcc aagaccctgg
+      181 gaaggtcttc tttggcaatg tggattcatc tgggataaaa cacaatattt ttaaccctcc
+      241 aattattgct cgatacatcc gtttgcaccc aactcattat agcattcgca gcactcttcg
+      301 catggagttg atgggctgtg atttaaatag ttgcagcatg ccattgggaa tggagagtaa
+      361 agcaatatca gatgcacaga ttactgcttc atcctacttt accaatatgt ttgccacctg
+      421 gtctccttca aaagctcgac ttcacctcca agggaggagt aatgcctgga gacctcaggt
+      481 gaataatcca aaagagtggc tgcaagtgga cttccagaag acaatgaaag tcacaggagt
+      541 aactactcag ggagtaaaat ctctgcttac cagcatgtat gtgaaggagt tcctcatctc
+      601 cagcagtcaa gatggccatc agtggactct cttttttcag aatggcaaag taaaggtttt
+      661 tcagggaaat caagactcct tcacacctgt ggtgaactct ctagacccac cgttactgac
+      721 tcgctacctt cgaattcacc cccagagttg ggtgcaccag attgccctga ggatggaggt
+      781 tctgggctgc gaggcacagg acctctactg agggtggcca ctgcagcacc tgccactgcc
+      841 gtcacctctc cctcctcagc tccagggcag tgtccctccc tggcttgcct tctacctttg
+      901 tgctaaatcc tagcagacac tgccttgaag cctcctgaat taactatcat cagtcctgca
+      961 tttctttggt ggggggccag gagggtgcat ccaatttaac ttaactctta cctattttct
+     1021 gcagctgctc ccagattact ccttccttcc aatataacta ggcaaaaaga agtgaggaga
+     1081 aacctgcatg aaagcattct tccctgaaaa gttaggcctc tcagagtcac cacttcctct
+     1141 gttgtagaaa aactatgtga tgaaactttg aaaaagatat ttatgatgtt aacatttcag
+     1201 gttaagcctc atacgtttaa aataaaactc tcagttgttt attatcctga tcaagcatgg
+     1261 aacaaagcat gtttcaggat cagatcaata caatcttgga gtcaaaaggc aaatcatttg
+     1321 gacaatctgc aaaatggaga gaatacaata actactacag taaagtctgt ttctgcttcc
+     1381 ttacacatag atataattat gttatttagt cattatgagg ggcacattct tatctccaaa
+     1441 actagcattc ttaaactgag aattatagat ggggttcaag aatccctaag tcccctgaaa
+     1501 ttatataagg cattctgtat aaatgcaaat gtgcattttt ctgacgagtg tccatagata
+     1561 taaagccatt tggtcttaat tctgaccaat aaaaaaataa gtcaggagga tgcaattgtt
+     1621 gaaagctttg aaataaaata acaatgtctt cttgaaattt gtgatggcca agaaagaaaa
+     1681 tgatgatgac attaggcttc taaaggacat acatttaata tttctgtgga aatatgagga
+     1741 aaatccatgg ttatctgaga taggagatac aaactttgta attctaataa tgcactcagt
+     1801 ttactctctc cctctactaa tttcctgctg aaaataacac aacaaaaatg taacagggga
+     1861 aattatatac cgtgactgaa aactagagtc ctacttacat agttgaaata tcaaggaggt
+     1921 cagaagaaaa ttggactggt gaaaacagaa aaaacactcc agtctgccat atcaccacac
+     1981 aataggatcc cccttcttgc cctccacccc cataagattg tgaagggttt actgctcctt
+     2041 ccatctgcct gaccccttca ctatgactac acagaatctc ctgatagtaa agggggctgg
+     2101 agacaaggat aagttataga gcagttggag gaagcatcca aagattgcaa cccagggcaa
+     2161 atggaaaaca ggagatccta atatgaaaga aaaatggatc ccaatctgag aaaaggcaaa
+     2221 agaatggcta cttttttcta tgctggagta ttttctaata atcctgcttg acccttatct
+     2281 gacctctttg gaaactataa catagctgtc acagtatagt cacaatccac aaatgatgca
+     2341 ggtgcaaatg gtttatagcc ctgtgaagtt cttaaagttt agaggctaac ttacagaaat
+     2401 gaataagttg ttttgtttta tagcccggta gaggagttaa ccccaaaggt gatatggttt
+     2461 tatttcctgt tatgtttaac ttgataatct tattttggca ttcttttccc attgactata
+     2521 tacatctcta tttctcaaat gttcatggaa ctagctcttt tattttcctg ctggtttctt
+     2581 cagtaatgag ttaaataaaa cattgacaca tacaaa
+//
+
