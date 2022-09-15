@@ -30,3 +30,17 @@ def get_cds_feature_from_sequence_record(seq_record):
             return feature
     
     return None
+
+# Check if the translated open reading frame contains the coding sequence protein
+# described in the genbank file. 
+def check_if_valid_orf_with_cds(seq_record, orf_protein):
+    cds_feature = get_cds_feature_from_sequence_record(seq_record)
+        
+    gene_sequence = cds_feature.extract(seq_record.seq)
+    protein_sequence = translate_sequence_to_protein(seq=gene_sequence, cds=True)
+
+    # Halt if the translation does not match
+    assert protein_sequence == cds_feature.qualifiers["translation"][0]
+
+    # ORF must include the protein sequence of the CDS for it to be a valid ORF
+    return orf_protein.count(str(protein_sequence)) == 1
