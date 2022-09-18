@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 Ejemplos de los llamados:
 ```
-python main.py -e 1 -i 1A
+python main.py -e 1 -gb 1A
 ```
 Corre el ejercicio 1 con el archivo GenBank del mRNA, factor coagulador VIII isoform A prepotein.
 
