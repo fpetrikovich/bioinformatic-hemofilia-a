@@ -130,3 +130,5 @@ venv.bak/
 
 # Propio
 outputs/
+ncbi-blast-2.13.0+
+reports/*
