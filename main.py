@@ -5,6 +5,7 @@ from Ex1 import run_exercise_1
 from Ex2 import run_exercise_2
 from file_helper import file_param_to_file_name, generate_output_path
 
+
 def main():
     # Get the current time for the output files
     str_time = time.strftime("%Y%m%d-%H%M%S");
@@ -15,7 +16,7 @@ def main():
     # Add arguments
     parser.add_argument('-e', dest='exercise', required=True)   # Ejercicio para correr
     parser.add_argument('-gb', '--genbank', help='identifier of genbank input file',
-                        type=str, default='1A', required=False)
+                        type=str, required=False)
     parser.add_argument('-q', '--query', help='FASTA file for BLAST query',
                         type=str, required=False)
     parser.add_argument('-r', '--report', help='Report output file',
@@ -36,7 +37,7 @@ def main():
             output_file = generate_output_path(str(args.genbank) + "_" + str_time)
 
         elif args.query != None and args.report != None:
-            input_file = args.query
+            input_file = file_param_to_file_name(str(args.query))
             output_file = 'reports/' + args.report
             output_file_local = 'reports/local_' + args.report
     
