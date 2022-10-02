@@ -34,6 +34,7 @@ def run_exercise_1(genbank_file, fasta_nuc_output_file, fasta_prot_output_file):
             if check_if_valid_orf_with_cds(seq_record, status["protein"]):
                 print("########################## START ##########################")
                 print("Found correct Open Reading Frame based on CDS comparison:")
+                print("ORF: %i" % j)
                 print("Start: %i" % (status["start"]))
                 print("End: %i" % (status["end"]))
                 print("Is reverse complement sequence: ", (status["is_reverse"]))
@@ -59,7 +60,7 @@ def handle_new_open_reading_frame(orf_id, nucleotides, start_offset, is_reverse,
         "protein": protein_sequence
     }
     # Write the ORF to the file
-    protein_handle.write('\n>lcl|ORF%i\n%s' % (orf_id, protein_sequence))
-    nucleotide_handle.write('\n>lcl|ORF%i\n%s' % (orf_id, nucleotides[start:end]))
+    protein_handle.write('>lcl|ORF%i\n%s\n' % (orf_id, protein_sequence))
+    nucleotide_handle.write('>lcl|ORF%i\n%s\n' % (orf_id, nucleotides[start:end]))
 
     return orf_status

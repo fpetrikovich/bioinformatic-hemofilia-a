@@ -20,7 +20,7 @@ def main():
     parser.add_argument('-q', '--query', help='FASTA file for BLAST query',
                         type=str, required=False)
     parser.add_argument('-r', '--report', help='Report output file',
-                        type=str, default='myblast.report', required=False)
+                        type=str, default='myblast', required=False)
     
     args = parser.parse_args()
 
@@ -34,7 +34,7 @@ def main():
         item = int(args.exercise)
         if args.genbank != None:
             input_file = file_param_to_file_name(str(args.genbank))
-            output_file = generate_output_path(str(args.genbank) + "_" + str_time)
+            output_file = generate_output_path(str(args.genbank))
 
         elif args.query != None and args.report != None:
             input_file = file_param_to_file_name(str(args.query))
@@ -48,8 +48,8 @@ def main():
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
     if item == 1:
-        nucleotide_file = output_file + '_nucleotides.fasta'
-        proteins_file = output_file + '_proteins.fasta'
+        nucleotide_file = output_file + '_nucleotides.faa'
+        proteins_file = output_file + '_proteins.faa'
         run_exercise_1(input_file, nucleotide_file, proteins_file)
     
     elif item == 2:

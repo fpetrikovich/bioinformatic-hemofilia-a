@@ -129,6 +129,8 @@ env.bak/
 venv.bak/
 
 # Propio
-outputs/
+outputs/*.faa
+outputs/bash/*
+outputs/orfs/*
 ncbi-blast-2.13.0+
 reports/*
