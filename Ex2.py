@@ -2,7 +2,6 @@ import argparse
 
 from Bio import SeqIO
 from Bio.Blast import NCBIWWW, NCBIXML
-from Bio.Blast.Applications import NcbiblastxCommandline
 from file_helper import run_bash_file, save_file, create_bash_file
 
 E_VALUE_THRESHOLD = 0.01
@@ -60,18 +59,12 @@ def run_blast_offline_query(report_name, sequence, orf_index):
 
 def separate_sequences(fasta_string): 
 	fasta_array = [i for i in fasta_string.split('\n')]
+	# Want to remove the >... line to only keep the sequence itself
 	return [fasta_array[i+1] for i in range(0, len(fasta_array), 2)]
 
 def get_blast_online_record(sequence):
 	result_handle = NCBIWWW.qblast('blastp', 'nr', sequence)
 
-	return NCBIXML.read(result_handle)
-
-def get_blast_offline_record(sequence):
-	blastx_cline = NcbiblastxCommandline(query=sequence, db="nr", evalue=0.001, outfmt=5, out="tmp.xml")
-	blastx_cline()
-
-	result_handle = open("tmp.xml")
 	return NCBIXML.read(result_handle)
 
 def analyze_blast_record(blast_record):
@@ -84,6 +77,7 @@ def analyze_blast_record(blast_record):
 				output += "Sequence: %s\n" % alignment.hit_def.split(' >')[0]
 				output += "Accession: %s\n" % alignment.hit_id.split('|')[1]
 				output += "Length: %d\n" % alignment.length
+				output += "Bits: %s\n" % str(hsp.bits)
 				output += "Score: %s\n" % str(hsp.score)
 				output += "Identiy: %d/%d(%.2f%%)\n" % (hsp.identities, hsp.align_length, (100 * hsp.identities / hsp.align_length))
 				output += "E Value: %f\n" % hsp.expect

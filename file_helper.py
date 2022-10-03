@@ -1,12 +1,14 @@
-from constants import mRNA_GENBANK_FILES
+from constants import FASTA_FILES, mRNA_GENBANK_FILES
 from subprocess import call
 
 def file_param_to_file_name(param):
     file_names = {
         "1A": mRNA_GENBANK_FILES.ISOFORM_A_PREPROTEIN.value,
         "1B": mRNA_GENBANK_FILES.ISOFORM_B.value,
-        "2A": mRNA_GENBANK_FILES.FASTA_FILE_A.value,
-        "2B": mRNA_GENBANK_FILES.FASTA_FILE_B.value
+        "2A": FASTA_FILES.ORFS_ISOFORM_A_PREPROTEIN.value,
+        "2B": FASTA_FILES.ORFS_ISOFORM_B.value,
+        "2AProtein": FASTA_FILES.ISOFORM_A_PREPROTEIN.value,
+        "2BProtein": FASTA_FILES.ISOFORM_B.value
     }
 
     folder_names = {
@@ -14,6 +16,8 @@ def file_param_to_file_name(param):
         "1B": "inputs/",
         "2A": "outputs/",
         "2B": "outputs/",
+        "2AProtein": "outputs/",
+        "2BProtein": "outputs/",
     }
  
     return folder_names.get(param, "") + file_names.get(param, "")

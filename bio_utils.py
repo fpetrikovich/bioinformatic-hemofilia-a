@@ -44,3 +44,7 @@ def check_if_valid_orf_with_cds(seq_record, orf_protein):
 
     # ORF must include the protein sequence of the CDS for it to be a valid ORF
     return orf_protein.count(str(protein_sequence)) == 1
+
+def get_cds_protein_from_record(seq_record):
+    cds_feature = get_cds_feature_from_sequence_record(seq_record)    
+    return cds_feature.qualifiers["translation"][0]
