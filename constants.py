@@ -1,6 +1,6 @@
 from enum import Enum
 
-FASTA_EXTENSION = ".faa"
+FASTA_EXTENSION = ".fasta"
 ORFS_FILE_SUFFIX = "_proteins"
 CORRECT_ORF_FILE_SUFFIX = "_final_protein"
 

@@ -4,40 +4,72 @@ from Bio import SeqIO
 from Bio.Blast import NCBIWWW, NCBIXML
 from file_helper import run_bash_file, save_file, create_bash_file
 
-E_VALUE_THRESHOLD = 0.01
+E_VALUE_THRESHOLD = 0.04
 
 def run_exercise_2(fasta_file, online_file_report, local_file_report):
 	# Read file
 	fasta_string = open(fasta_file).read()
-
 	# Sanity string by removing empty lines 
 	fasta_string = '\n'.join([i for i in fasta_string.split('\n') if len(i) > 0])
-
+	# Remove all > lines and return an array of the sequences
 	sequences = separate_sequences(fasta_string)
+	# Run all blast consults and generate the reports
+	run_blast_for_sequences(sequences, online_file_report, local_file_report)
 
+
+def run_blast_for_sequences(sequences, online_file_report, local_file_report):
+	"""
+    Saves each sequence in a separate file and runs a local and remote blast 
+	consult. Creates a report for each type of consult.
+    Arguments:
+        sequences: Array of aminoacid sequences
+        online_file_report: main name the remote reports will have
+		local_file_report: main name the local reports will have.
+    """
 	index = 1
 
 	for sequence in sequences:
+		# Create a separate file for the ORF to avoid multiple sequences in one file
+		file_name = create_sequence_fasta_file(str(index), sequence)
+
 		print("----------\nStarting BLAST Query for ORF " + str(index))
-		
 		print("ONLINE QUERY IN PROGRESS...")
+		
 		blast_online_record = get_blast_online_record(sequence)
 
 		online_report = analyze_blast_record(blast_online_record)
 
 		save_file(online_file_report + "_ORF" + str(index) + ".report", online_report)
 		
-		# print("OFFLINE QUERY IN PROGRESS...")
-		# run_blast_offline_query(local_file_report + "_ORF" + str(index) + ".report", sequence, str(index))
+		print("OFFLINE QUERY IN PROGRESS...")
+		
+		run_blast_offline_query(local_file_report + "_ORF" + str(index) + ".report", file_name, str(index))
 
 		index += 1
 
-	return
 
-def run_blast_offline_query(report_name, sequence, orf_index):
-	# create file with the ORF sequence
+def create_sequence_fasta_file(orf_index, sequence):
+	"""
+    Creates a new fasta file for the ORF sequence.
+    Arguments:
+        orf_index: integer representing the ORF
+        sequence: sequence to add to the fasta file
+	Returns: Name of the file created
+    """
 	orf_file_name = "outputs/orfs/f8_protein_orf_" + orf_index + ".faa"
 	save_file(orf_file_name, sequence)
+	return orf_file_name
+
+
+def run_blast_offline_query(report_name, file_name, orf_index):
+	"""
+    Creates a bash script with the command to run the local Blast 
+	consult and executes the script.
+    Arguments:
+        report_name: name of the file where the consult response will be stored
+        file_name: fasta file to use as blast query
+		orf_index: index of the ORF being queried
+    """
 
 	# name of the script to run local blast
 	script_name = "outputs/bash/script_orf" + orf_index
@@ -47,7 +79,7 @@ def run_blast_offline_query(report_name, sequence, orf_index):
 	# Specify the database
 	command += "-db ncbi-blast-2.13.0+/data/swissprot "
 	# file with the query
-	command += "-query " + orf_file_name + " "
+	command += "-query " + file_name + " "
 	# E value limit
 	command += "-evalue " + str(E_VALUE_THRESHOLD) + " "
 	# output file
@@ -58,16 +90,36 @@ def run_blast_offline_query(report_name, sequence, orf_index):
 
 
 def separate_sequences(fasta_string): 
+	"""
+    Retrieves only the sequences from the contents of a fasta file.
+    Arguments:
+        fasta_string: contents of the fasta file
+	Returns: array of sequences
+    """
 	fasta_array = [i for i in fasta_string.split('\n')]
 	# Want to remove the >... line to only keep the sequence itself
 	return [fasta_array[i+1] for i in range(0, len(fasta_array), 2)]
 
-def get_blast_online_record(sequence):
-	result_handle = NCBIWWW.qblast('blastp', 'nr', ">Seq1\n" + sequence)
 
+def get_blast_online_record(sequence):
+	"""
+    Uses the swissprot database to query an aminoacid sequence.
+    Arguments:
+        sequence: sequence to query through a remote consult
+	Returns: results of query
+    """
+	result_handle = NCBIWWW.qblast('blastp', 'swissprot', sequence)
 	return NCBIXML.read(result_handle)
 
+
 def analyze_blast_record(blast_record):
+	"""
+    Parses the blast consult response to facilitate its reading.
+    Arguments:
+        blast_record: response of the online blast consult.
+	Returns: formatted string ready to be read
+    """
+
 	output = ""
 
 	for alignment in blast_record.alignments:

@@ -41,7 +41,7 @@ def run_exercise_1(genbank_file, fasta_nuc_output_file, fasta_prot_output_file, 
                 print("########################### END ###########################")
                 
                 # Create valid protein fasta sequence
-                save_file(fasta_final_protein_output_file, ">Seq1\n" + str(get_cds_protein_from_record(seq_record)))
+                save_file(fasta_final_protein_output_file, ">seq0\n" + str(get_cds_protein_from_record(seq_record)))
                 break
 
     nucleotide_handle.close()

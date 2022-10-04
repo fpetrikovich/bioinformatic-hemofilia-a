@@ -49,7 +49,7 @@ def main():
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
     if item == 1:
-        nucleotide_file = output_file + '_nucleotides.faa'
+        nucleotide_file = output_file + '_nucleotides' + FASTA_EXTENSION
         proteins_file = output_file + ORFS_FILE_SUFFIX + FASTA_EXTENSION
         final_protein_file = output_file + CORRECT_ORF_FILE_SUFFIX + FASTA_EXTENSION
         run_exercise_1(input_file, nucleotide_file, proteins_file, final_protein_file)
