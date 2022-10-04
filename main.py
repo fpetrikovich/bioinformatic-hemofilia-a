@@ -15,7 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description="Bioinformatics Sequencing")
 
     # Add arguments
-    parser.add_argument('-e', dest='exercise', required=True)   # Ejercicio para correr
+    parser.add_argument('-e', '--exercise', required=True)   # Ejercicio para correr
     parser.add_argument('-gb', '--genbank', help='identifier of genbank input file',
                         type=str, required=False)
     parser.add_argument('-q', '--query', help='Identifier of fasta file to query',

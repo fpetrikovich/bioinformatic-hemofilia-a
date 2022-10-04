@@ -27,8 +27,8 @@ def run_exercise_2(fasta_file, online_file_report, local_file_report):
 
 		save_file(online_file_report + "_ORF" + str(index) + ".report", online_report)
 		
-		print("OFFLINE QUERY IN PROGRESS...")
-		run_blast_offline_query(local_file_report + "_ORF" + str(index) + ".report", sequence, str(index))
+		# print("OFFLINE QUERY IN PROGRESS...")
+		# run_blast_offline_query(local_file_report + "_ORF" + str(index) + ".report", sequence, str(index))
 
 		index += 1
 
@@ -63,7 +63,7 @@ def separate_sequences(fasta_string):
 	return [fasta_array[i+1] for i in range(0, len(fasta_array), 2)]
 
 def get_blast_online_record(sequence):
-	result_handle = NCBIWWW.qblast('blastp', 'nr', sequence)
+	result_handle = NCBIWWW.qblast('blastp', 'nr', ">Seq1\n" + sequence)
 
 	return NCBIXML.read(result_handle)
 
@@ -71,8 +71,11 @@ def analyze_blast_record(blast_record):
 	output = ""
 
 	for alignment in blast_record.alignments:
+		print("in alignment")
 		for hsp in alignment.hsps:
+			print("in hsps")
 			if hsp.expect < E_VALUE_THRESHOLD:
+				print("valid evalue")
 				output += "------Alignment------\n"
 				output += "Sequence: %s\n" % alignment.hit_def.split(' >')[0]
 				output += "Accession: %s\n" % alignment.hit_id.split('|')[1]
