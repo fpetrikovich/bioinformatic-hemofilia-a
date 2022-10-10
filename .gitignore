@@ -130,6 +130,7 @@ venv.bak/
 
 # Propio
 outputs/*.faa
+outputs/*.fasta
 outputs/bash/*
 outputs/orfs/*
 ncbi-blast-2.13.0+

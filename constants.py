@@ -1,8 +1,11 @@
 from enum import Enum
 
-FASTA_EXTENSION = ".faa"
+FASTA_EXTENSION = ".fasta"
 ORFS_FILE_SUFFIX = "_proteins"
 CORRECT_ORF_FILE_SUFFIX = "_final_protein"
+
+START_CODON = "AUG"
+END_CODONS = ["UAA", "UAG", "UGA"]
 
 # mRNA coagulation factor VIII GenBank Files
 class mRNA_GENBANK_FILES(Enum):

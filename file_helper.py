@@ -25,6 +25,8 @@ def file_param_to_file_name(param):
 def generate_output_path(filename):
     return "outputs/" + filename
 
+def generate_report_path(filename, is_local = True):
+    return "reports/" + ("local_" if is_local else "") + filename
 
 def save_file(file_name, content): 
 	f = open(file_name, "w")
