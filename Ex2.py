@@ -6,7 +6,7 @@ from file_helper import run_bash_file, save_file, create_bash_file
 
 E_VALUE_THRESHOLD = 0.04
 
-def run_exercise_2(fasta_file, online_file_report, local_file_report):
+def run_exercise_2(fasta_file, file_report, is_local, online_blast_db):
 	# Read file
 	fasta_string = open(fasta_file).read()
 	# Sanity string by removing empty lines 
@@ -14,10 +14,10 @@ def run_exercise_2(fasta_file, online_file_report, local_file_report):
 	# Remove all > lines and return an array of the sequences
 	sequences = separate_sequences(fasta_string)
 	# Run all blast consults and generate the reports
-	run_blast_for_sequences(sequences, online_file_report, local_file_report)
+	run_blast_for_sequences(sequences, file_report, is_local, online_blast_db)
 
 
-def run_blast_for_sequences(sequences, online_file_report, local_file_report):
+def run_blast_for_sequences(sequences, file_report, is_local, online_blast_db):
 	"""
     Saves each sequence in a separate file and runs a local and remote blast 
 	consult. Creates a report for each type of consult.
@@ -33,17 +33,20 @@ def run_blast_for_sequences(sequences, online_file_report, local_file_report):
 		file_name = create_sequence_fasta_file(str(index), sequence)
 
 		print("----------\nStarting BLAST Query for ORF " + str(index))
-		print("ONLINE QUERY IN PROGRESS...")
-		
-		blast_online_record = get_blast_online_record(sequence)
 
-		online_report = analyze_blast_record(blast_online_record)
+		if not is_local:
+			print("ONLINE QUERY IN PROGRESS...")
+			
+			blast_online_record = get_blast_online_record(sequence, online_blast_db)
 
-		save_file(online_file_report + "_ORF" + str(index) + ".report", online_report)
+			online_report = analyze_blast_record(blast_online_record)
+
+			save_file(file_report + "_ORF" + str(index) + ".report", online_report)
 		
-		print("OFFLINE QUERY IN PROGRESS...")
-		
-		run_blast_offline_query(local_file_report + "_ORF" + str(index) + ".report", file_name, str(index))
+		else:
+			print("OFFLINE QUERY IN PROGRESS...")
+			
+			run_blast_offline_query(file_report + "_ORF" + str(index) + ".report", file_name, str(index))
 
 		index += 1
 
@@ -101,14 +104,14 @@ def separate_sequences(fasta_string):
 	return [fasta_array[i+1] for i in range(0, len(fasta_array), 2)]
 
 
-def get_blast_online_record(sequence):
+def get_blast_online_record(sequence, online_blast_db):
 	"""
     Uses the swissprot database to query an aminoacid sequence.
     Arguments:
         sequence: sequence to query through a remote consult
 	Returns: results of query
     """
-	result_handle = NCBIWWW.qblast('blastp', 'swissprot', sequence)
+	result_handle = NCBIWWW.qblast('blastp', online_blast_db, sequence)
 	return NCBIXML.read(result_handle)
 
 
@@ -119,7 +122,6 @@ def analyze_blast_record(blast_record):
         blast_record: response of the online blast consult.
 	Returns: formatted string ready to be read
     """
-
 	output = ""
 
 	for alignment in blast_record.alignments:
