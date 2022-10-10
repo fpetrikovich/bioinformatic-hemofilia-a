@@ -5,6 +5,8 @@
 Crear el entorno virtual con `virtualenv`:
 ```
 virtualenv .env
+o
+python3 -m venv "virtualenv"
 ```
 
 Activar el entorno:
@@ -28,6 +30,10 @@ Corre el ejercicio 1 con el archivo GenBank del mRNA, factor coagulador VIII iso
 python3 main.py -e 2 -q 2B -r blast
 ```
 Corre el ejercicio 2 con el FASTA file de la proteina B generada al correr el ejercicio 1, creando reportes para cada ORF al realizar consultas online y locales a BLAST. 
+```
+python main.py -e 3 -origin species/homo_sapiens.faa -compare species/canis_lupus.faa species/mus_musculus.faa species/sus_scrofa.faa -out ex3.out
+```
+Corre el ejercicio 3 con el FASTA file generado en el ejercicio 1, y los compara con las especies resultantes del BLAST. 
 
 ### Setup de Blast Local - Linux
 Descargarse el tar adecuado desde:

@@ -3,6 +3,7 @@ import time
 
 from Ex1 import run_exercise_1
 from Ex2 import run_exercise_2
+from Ex3 import run_exercise_3
 from file_helper import file_param_to_file_name, generate_output_path
 from constants import ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX
 
@@ -22,6 +23,12 @@ def main():
                         type=str, required=False)
     parser.add_argument('-r', '--report', help='Report output file',
                         type=str, default='myblast', required=False)
+    parser.add_argument('-origin', '--origin', help='With origin file to compare',
+                        type=str, required=False)
+    parser.add_argument('-compare', '--compare', help='Files to compare',
+                        type=str, required=False, nargs='+')
+    parser.add_argument('-out', '--output', help='Output file name',
+                        type=str, required=False)
     
     args = parser.parse_args()
 
@@ -33,7 +40,7 @@ def main():
     # Param parsing and setup
     try:
         item = int(args.exercise)
-        if args.genbank != None:
+        if args.genbank != None: 
             input_file = file_param_to_file_name(str(args.genbank))
             output_file = generate_output_path(str(args.genbank))
 
@@ -41,9 +48,15 @@ def main():
             input_file = file_param_to_file_name(str(args.query))
             output_file = 'reports/' + args.report
             output_file_local = 'reports/local_' + args.report
-    
-    except:
-        print("[ERROR] Invalid option input")
+
+        elif args.origin != None and args.compare != None and args.output != None:
+            origin_sequence = args.origin
+            species_list = args.compare
+            output_file = args.output
+
+
+    except Exception as e:
+        print("[ERROR] " + str(e))
         exit(0)
 
     # Run the exercise with the parsed params
@@ -56,6 +69,9 @@ def main():
     
     elif item == 2:
         run_exercise_2(input_file, output_file, output_file_local)
+
+    elif item == 3:
+        run_exercise_3(origin_sequence, species_list, output_file)
 
 if __name__ == '__main__':
     main()
