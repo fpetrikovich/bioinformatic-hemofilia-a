@@ -1,7 +1,7 @@
 import os.path
 from constants import FASTA_FILES, mRNA_GENBANK_FILES
 from subprocess import call
-from constants import FASTA_TYPES, OUTPUT_TYPES
+from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR
 
 def file_param_to_file_name(param):
     file_names = {
@@ -16,16 +16,16 @@ def file_param_to_file_name(param):
     folder_names = {
         "1A": "inputs/",
         "1B": "inputs/",
-        "2A": "outputs/",
-        "2B": "outputs/",
-        "2AProtein": "outputs/",
-        "2BProtein": "outputs/",
+        "2A": "/",
+        "2B": EX1_OUTPUT_DIR,
+        "2AProtein": EX1_OUTPUT_DIR,
+        "2BProtein": EX1_OUTPUT_DIR,
     }
  
     return folder_names.get(param, "") + file_names.get(param, "")
 
 def generate_output_path(filename):
-    return "outputs/" + filename
+    return EX1_OUTPUT_DIR + filename
 
 def generate_report_path(filename, is_local = True):
     return "reports/" + ("local_" if is_local else "") + filename
