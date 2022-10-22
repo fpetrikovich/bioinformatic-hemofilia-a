@@ -2,7 +2,7 @@ import time
 
 from Bio.Blast import NCBIWWW, NCBIXML
 from file_helper import run_bash_file, save_file, create_bash_file
-from constants import EX1_OUTPUT_DIR
+from constants import EX1_OUTPUT_DIR, ALIGNMENT_HEADER
 
 E_VALUE_THRESHOLD = 0.04
 
@@ -127,7 +127,7 @@ def analyze_blast_record(blast_record):
 		for hsp in alignment.hsps:
 			if hsp.expect < E_VALUE_THRESHOLD:
 				records_found += 1
-				output += "------Alignment------\n"
+				output += ALIGNMENT_HEADER
 				output += "Sequence: %s\n" % alignment.hit_def.split(' >')[0]
 				output += "Accession: %s\n" % alignment.hit_id.split('|')[1]
 				output += "Length: %d\n" % alignment.length

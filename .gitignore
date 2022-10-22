@@ -135,3 +135,4 @@ fasta_outputs/bash/*
 fasta_outputs/orfs/*
 ncbi-blast-2.13.0+
 reports/*
+pattern_hits/**

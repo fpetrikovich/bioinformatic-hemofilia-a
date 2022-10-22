@@ -4,8 +4,9 @@ import time
 from Ex1 import run_exercise_1
 from Ex2 import run_exercise_2
 from Ex3 import run_exercise_3
+from Ex4 import run_exercise_4
 from file_helper import file_param_to_file_name, generate_output_path, generate_report_path
-from constants import ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX
+from constants import ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR
 
 
 def main():
@@ -17,8 +18,10 @@ def main():
 
     # Add arguments
     parser.add_argument('-e', '--exercise', required=True)   # Ejercicio para correr
+    ######################### Exercise 1 params #########################
     parser.add_argument('-gb', '--genbank', help='identifier of genbank input file',
                         type=str, required=False)
+    ######################### Exercise 2 params #########################
     parser.add_argument('-db', '--database', help='database to use for remote consults (swissprot or nr)',
                         type=str, default='swissprot', required=False)
     parser.add_argument('-q', '--query', help='Identifier of fasta file to query',
@@ -26,13 +29,19 @@ def main():
     parser.add_argument('-l', '--local', action='store_true')
     parser.add_argument('-r', '--report', help='Report output file',
                         type=str, default='myblast', required=False)
+    ######################### Exercise 3 params #########################
     parser.add_argument('-origin', '--origin', help='With origin file to compare',
                         type=str, required=False)
     parser.add_argument('-compare', '--compare', help='Files to compare',
                         type=str, required=False, nargs='+')
     parser.add_argument('-out', '--output', help='Output file name',
                         type=str, required=False)
-    
+    ######################### Exercise 4 params #########################
+    parser.add_argument('-b', '--blast', help='Blast report file name to use as input',
+                        type=str, required=False)
+    parser.add_argument('-p', '--pattern', help='Pattern to find in description of blast report',
+                        type=str, required=False)    
+
     args = parser.parse_args()
 
     input_file = ""
@@ -43,26 +52,33 @@ def main():
     # Param parsing and setup
     try:
         item = int(args.exercise)
-        if args.genbank != None: 
+        if item == 1 and args.genbank != None: 
             input_file = file_param_to_file_name(str(args.genbank))
             output_file = generate_output_path(str(args.genbank))
 
-        elif args.query != None:
+        elif item == 2 and args.query != None:
             input_file = file_param_to_file_name(str(args.query))
             output_file = generate_report_path(str(args.report), bool(args.local))
             database = str(args.database)
             if not database in ["swissprot", "nr"]:
                 print("[ERROR] Invalid database option. Must be swissprot or nr.")
-                exit(0)
+                exit(1)
 
-        elif args.origin != None and args.compare != None and args.output != None:
+        elif item == 3 and args.origin != None and args.compare != None and args.output != None:
             origin_sequence = args.origin
             species_list = args.compare
             output_file = args.output
 
+        elif item == 4 and args.blast != None and args.pattern != None:
+            input_file = BLAST_REPORTS_DIR + args.blast
+
+        else:
+            print("[ERROR] Invalid combination of params. Check the manual.")
+            exit(1)
+
     except Exception as e:
         print("[ERROR] " + str(e))
-        exit(0)
+        exit(1)
 
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
@@ -79,10 +95,14 @@ def main():
         
         elif item == 3:
             run_exercise_3(origin_sequence, species_list, output_file)
+
+        elif item == 4:
+            run_exercise_4(input_file, args.pattern)
+
     except Exception as e:
         print("[ERROR] Unknown error when running the exercise.")
         print("[ERROR][MESSAGE] " + str(e))
-        exit(0)
+        exit(1)
     
     execution_time = int(time.time() - start_time)
     print("[INFO] Execution took %i mins %i seconds" % (int(execution_time / 60), execution_time % 60))

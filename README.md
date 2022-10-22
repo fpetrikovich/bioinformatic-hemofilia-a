@@ -34,6 +34,11 @@ Corre el ejercicio 2 con el FASTA file de la proteina B generada al correr el ej
 python main.py -e 3 -origin species/homo_sapiens.faa -compare species/canis_lupus.faa species/mus_musculus.faa species/sus_scrofa.faa -out ex3.out
 ```
 Corre el ejercicio 3 con el FASTA file generado en el ejercicio 1, y los compara con las especies resultantes del BLAST. 
+```
+python main.py -e 4 -b sp_ORF1.report -p "mus musculus"
+```
+Correra el ejercicio 4 con el reporte sp_ORF1.report viendo si encuentra el patron 
+musculus en las descripciones de los alineamientos.
 
 ### Setup de Blast Local - Linux
 Descargarse el tar adecuado desde:
