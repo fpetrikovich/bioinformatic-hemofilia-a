@@ -1,6 +1,5 @@
-import argparse
+import time
 
-from Bio import SeqIO
 from Bio.Blast import NCBIWWW, NCBIXML
 from file_helper import run_bash_file, save_file, create_bash_file
 
@@ -32,23 +31,21 @@ def run_blast_for_sequences(sequences, file_report, is_local, online_blast_db):
 		# Create a separate file for the ORF to avoid multiple sequences in one file
 		file_name = create_sequence_fasta_file(str(index), sequence)
 
-		print("----------\nStarting BLAST Query for ORF " + str(index))
+		print("----------\nStarting " + ("Local" if is_local else "Online") + " BLAST Query for ORF " + str(index))
 
-		if not is_local:
-			print("ONLINE QUERY IN PROGRESS...")
-			
+		if not is_local:			
 			blast_online_record = get_blast_online_record(sequence, online_blast_db)
 
 			online_report = analyze_blast_record(blast_online_record)
 
 			save_file(file_report + "_ORF" + str(index) + ".report", online_report)
 		
-		else:
-			print("OFFLINE QUERY IN PROGRESS...")
-			
+		else:			
 			run_blast_offline_query(file_report + "_ORF" + str(index) + ".report", file_name, str(index))
 
 		index += 1
+
+	print("----------\n")
 
 
 def create_sequence_fasta_file(orf_index, sequence):
@@ -123,13 +120,12 @@ def analyze_blast_record(blast_record):
 	Returns: formatted string ready to be read
     """
 	output = ""
+	records_found = 0
 
 	for alignment in blast_record.alignments:
-		print("in alignment")
 		for hsp in alignment.hsps:
-			print("in hsps")
 			if hsp.expect < E_VALUE_THRESHOLD:
-				print("valid evalue")
+				records_found += 1
 				output += "------Alignment------\n"
 				output += "Sequence: %s\n" % alignment.hit_def.split(' >')[0]
 				output += "Accession: %s\n" % alignment.hit_id.split('|')[1]
@@ -141,6 +137,8 @@ def analyze_blast_record(blast_record):
 				output += "Query: %s\n" % hsp.query
 				output += "Match: %s\n" % hsp.match
 				output += "Subject: %s\n\n" % hsp.sbjct
+
+	print("\tFound %i records.\n" % (records_found))
 
 	return output
 

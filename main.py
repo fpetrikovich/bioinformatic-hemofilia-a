@@ -42,7 +42,7 @@ def main():
 
         elif args.query != None:
             input_file = file_param_to_file_name(str(args.query))
-            output_file = generate_report_path(str(args.report))
+            output_file = generate_report_path(str(args.report), bool(args.local))
             database = str(args.database)
             if not database in ["swissprot", "nr"]:
                 print("[ERROR] Invalid database option. Must be swissprot or nr.")
@@ -54,6 +54,7 @@ def main():
 
     # Run the exercise with the parsed params
     print("[INFO] Running exercise", item, "...")
+    start_time = time.time()
     try:
         if item == 1:
             nucleotide_file = output_file + '_nucleotides' + FASTA_EXTENSION
@@ -66,6 +67,9 @@ def main():
     except:
         print("[ERROR] Unknown error when running the exercise.")
         exit(0)
+    
+    execution_time = int(time.time() - start_time)
+    print("[INFO] Execution took %i mins %i seconds" % (int(execution_time / 60), execution_time % 60))
 
 if __name__ == '__main__':
     main()
