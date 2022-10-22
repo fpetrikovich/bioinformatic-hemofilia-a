@@ -1,26 +1,18 @@
 import sys
-import os.path
 from Bio import pairwise2
 from Bio.pairwise2 import format_alignment
 from Bio import SeqIO
 
-
-FASTA_TYPES = ['fas', 'fasta', 'faa']
-OUTPUT_TYPES = ['txt', 'output', 'out']
-
-def valid_input_file(file):
-  return os.path.exists(file) and file.split('.')[-1] in FASTA_TYPES
-
-def valid_output_file(file):
-  return file.split('.')[-1] in OUTPUT_TYPES
+from constants import FASTA_TYPES
+from file_helper import valid_fasta_file, valid_output_file
 
 def validate_params(input_file, species_list, output_file):
-  if not valid_input_file(input_file):
+  if not valid_fasta_file(input_file):
     print(f"Input file path must exist and must be FASTA (.{FASTA_TYPES[0]} o .{FASTA_TYPES[1]})")
     exit(1)
   
   for specie_file in species_list:
-    if not valid_input_file(specie_file):
+    if not valid_fasta_file(specie_file):
         print(specie_file)
         print(f"Species files path must exist and must be FASTA (.{FASTA_TYPES[0]} o .{FASTA_TYPES[1]})")
         exit(1)

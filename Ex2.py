@@ -138,7 +138,7 @@ def analyze_blast_record(blast_record):
 				output += "Match: %s\n" % hsp.match
 				output += "Subject: %s\n\n" % hsp.sbjct
 
-	print("\tFound %i records.\n" % (records_found))
+	print("Found %i records.\n" % (records_found))
 
 	return output
 

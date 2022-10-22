@@ -1,5 +1,7 @@
+import os.path
 from constants import FASTA_FILES, mRNA_GENBANK_FILES
 from subprocess import call
+from constants import FASTA_TYPES, OUTPUT_TYPES
 
 def file_param_to_file_name(param):
     file_names = {
@@ -41,3 +43,9 @@ def create_bash_file(file_name, command):
 
 def run_bash_file(file_name):
     rc = call(file_name, shell=True)
+
+def valid_fasta_file(file):
+  return os.path.exists(file) and file.split('.')[-1] in FASTA_TYPES
+
+def valid_output_file(file):
+  return file.split('.')[-1] in OUTPUT_TYPES

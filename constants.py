@@ -1,6 +1,8 @@
 from enum import Enum
 
 FASTA_EXTENSION = ".fasta"
+FASTA_TYPES = ['fas', 'fasta', 'faa']
+OUTPUT_TYPES = ['txt', 'output', 'out']
 ORFS_FILE_SUFFIX = "_proteins"
 CORRECT_ORF_FILE_SUFFIX = "_final_protein"
 

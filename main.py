@@ -79,8 +79,9 @@ def main():
         
         elif item == 3:
             run_exercise_3(origin_sequence, species_list, output_file)
-    except:
+    except Exception as e:
         print("[ERROR] Unknown error when running the exercise.")
+        print("[ERROR][MESSAGE] " + str(e))
         exit(0)
     
     execution_time = int(time.time() - start_time)
