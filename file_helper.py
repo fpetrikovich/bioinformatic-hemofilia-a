@@ -1,7 +1,7 @@
 import os.path
 from constants import FASTA_FILES, mRNA_GENBANK_FILES
 from subprocess import call
-from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR
+from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR, GENBANK_DIR
 
 def file_param_to_file_name(param):
     file_names = {
@@ -14,9 +14,9 @@ def file_param_to_file_name(param):
     }
 
     folder_names = {
-        "1A": "inputs/",
-        "1B": "inputs/",
-        "2A": "/",
+        "1A": GENBANK_DIR,
+        "1B": GENBANK_DIR,
+        "2A": EX1_OUTPUT_DIR,
         "2B": EX1_OUTPUT_DIR,
         "2AProtein": EX1_OUTPUT_DIR,
         "2BProtein": EX1_OUTPUT_DIR,
@@ -42,7 +42,12 @@ def create_bash_file(file_name, command):
     f.close()
 
 def run_bash_file(file_name):
-    rc = call(file_name, shell=True)
+    call(file_name, shell=True)
+
+def run_bash_file_with_arguments(file_name, args):
+    # call(file_name, shell=True, *args)
+    print(*args)
+    call(['bash', file_name, *args])
 
 def file_exists(file):
     return os.path.exists(file)
@@ -52,3 +57,6 @@ def valid_fasta_file(file):
 
 def valid_output_file(file):
   return file.split('.')[-1] in OUTPUT_TYPES
+
+def delete_file(path):
+    os.remove(path)

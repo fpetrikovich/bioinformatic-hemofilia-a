@@ -5,8 +5,9 @@ from Ex1 import run_exercise_1
 from Ex2 import run_exercise_2
 from Ex3 import run_exercise_3
 from Ex4 import run_exercise_4
+from Ex5 import run_exercise_5
 from file_helper import file_param_to_file_name, generate_output_path, generate_report_path
-from constants import ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR
+from constants import MSA_OUTPUT_DIR, ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR, EMBOSS_DIR
 
 
 def main():
@@ -41,6 +42,11 @@ def main():
                         type=str, required=False)
     parser.add_argument('-p', '--pattern', help='Pattern to find in description of blast report',
                         type=str, required=False)    
+    ######################### Exercise 5 params #########################
+    parser.add_argument('-seq', '--sequence', help='File with one or more nucleotide sequences',
+                        type=str, required=False)
+    parser.add_argument('-outseq', '--outputseq', help='File where possible AA ORFs will be printed',
+                        type=str, required=False)
 
     args = parser.parse_args()
 
@@ -67,10 +73,14 @@ def main():
         elif item == 3 and args.origin != None and args.compare != None and args.output != None:
             origin_sequence = args.origin
             species_list = args.compare
-            output_file = args.output
+            output_file = MSA_OUTPUT_DIR +  args.output
 
         elif item == 4 and args.blast != None and args.pattern != None:
             input_file = BLAST_REPORTS_DIR + args.blast
+
+        elif item == 5 and args.sequence != None:
+            output_file = "protein_orfs.orf" if args.outputseq == None else args.outputseq
+            input_file = args.sequence
 
         else:
             print("[ERROR] Invalid combination of params. Check the manual.")
@@ -98,6 +108,9 @@ def main():
 
         elif item == 4:
             run_exercise_4(input_file, args.pattern)
+        
+        elif item == 5:
+            run_exercise_5(input_file, output_file)
 
     except Exception as e:
         print("[ERROR] Unknown error when running the exercise.")

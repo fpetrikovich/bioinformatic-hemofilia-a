@@ -25,9 +25,12 @@ def run_exercise_4(blast_file, pattern):
     line = f.readline()
     while line:
         if line == ALIGNMENT_HEADER:
-            # read next line (description) and check if the pattern is present
+            # read next line (description)
             line = f.readline()
-            if pattern.lower() in line.lower():
+            # remove the "sequence: " portion of the line to get only the description
+            descr = line.split(' ', 1)[1]
+            # check if the pattern is present
+            if pattern.lower() in descr.lower():
                 # Pattern was found => save accession and hit
                 handle_alignment_hit(output, f, line, spaceless_pattern)
     
