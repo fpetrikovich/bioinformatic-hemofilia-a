@@ -4,12 +4,27 @@ from file_helper import delete_file, run_bash_file_with_arguments
 
 EX5_SCRIPT = EMBOSS_DIR + "emboss_script.sh"
 
-def run_exercise_5(input_path, output_file):
+def run_exercise_5(input_path, orf_file, prosite_file):
+    """
+    Escribir un script que llame a algún programa EMBOSS para que realice un análisis 
+    sobre una secuencia de nucleótidos fasta (del Ej. 1). Por ejemplo, que calcule los
+    ORFs y obtenga las secuencias de proteínas posibles. Luego bájense la bases de datos
+    PROSITE (archivo prosite.dat) de dominios/motivos funcionales conocidos, por medio 
+    del llamado a otro programa EMBOSS realizar el análisis de dominios de las secuencias 
+    de aminoácidos obtenidas y escribir los resultados en un archivo de salida.
+    """
+    # Copy the file to the emboss dir to have it in the same folder as the script
     file_name = copy_input_to_emboss_dir(input_path)
-    run_bash_file_with_arguments(EX5_SCRIPT, [file_name, output_file, "400"])
+    # Run the emboss script
+    run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, "400"])
+    # Delete the file we copied to the emboss dir to avoid duplicate files
     delete_file(EMBOSS_DIR + file_name)
 
+
 def copy_input_to_emboss_dir(input_path):
+    """
+    Given the path to a file, will copy the file to the emboss directory.
+    """
     file_path_array = input_path.split('/')
     file_name = file_path_array[len(file_path_array)-1]
     shutil.copyfile(input_path, EMBOSS_DIR + file_name)

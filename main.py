@@ -52,6 +52,7 @@ def main():
 
     input_file = ""
     output_file = ""
+    prosite_file = ""
     database = ""
     item = 0
 
@@ -79,7 +80,7 @@ def main():
             input_file = BLAST_REPORTS_DIR + args.blast
 
         elif item == 5 and args.sequence != None:
-            output_file = "protein_orfs.orf" if args.outputseq == None else args.outputseq
+            output_file = "protein_orfs" if args.outputseq == None else args.outputseq.split(".")[0]
             input_file = args.sequence
 
         else:
@@ -110,7 +111,9 @@ def main():
             run_exercise_4(input_file, args.pattern)
         
         elif item == 5:
-            run_exercise_5(input_file, output_file)
+            orf_file = output_file + ".orf"
+            prosite_file = output_file + ".patmatmotifs"
+            run_exercise_5(input_file, orf_file, prosite_file)
 
     except Exception as e:
         print("[ERROR] Unknown error when running the exercise.")
@@ -118,7 +121,7 @@ def main():
         exit(1)
     
     execution_time = int(time.time() - start_time)
-    print("[INFO] Execution took %i mins %i seconds" % (int(execution_time / 60), execution_time % 60))
+    print("[DONE] Execution took %i mins %i seconds" % (int(execution_time / 60), execution_time % 60))
 
 
 if __name__ == '__main__':

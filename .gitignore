@@ -138,4 +138,5 @@ reports/*
 pattern_hits/*
 msa/*
 emboss/*
-!emboss/emboss_script.sh
+!emboss/*.sh
+!emboss/prosite.*

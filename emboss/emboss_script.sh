@@ -1,4 +1,6 @@
 #!/bin/sh
-cd "emboss"
-echo "[INFO] Running command: getorf -minsize $3 -sequence $1 -outseq $2"
-getorf -minsize $3 -sequence $1 -outseq $2
+cd $1
+echo "[INFO] RUNNING COMMAND: getorf -minsize $5 -sequence $2 -outseq $3"
+getorf -minsize $5 -sequence $2 -outseq $3
+echo "[INFO] RUNNING COMMAND: patmatmotifs -sequence $3 -outfile $4 -full"
+patmatmotifs -sequence $3 -outfile $4 -full

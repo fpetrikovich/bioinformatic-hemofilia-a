@@ -45,8 +45,6 @@ def run_bash_file(file_name):
     call(file_name, shell=True)
 
 def run_bash_file_with_arguments(file_name, args):
-    # call(file_name, shell=True, *args)
-    print(*args)
     call(['bash', file_name, *args])
 
 def file_exists(file):
