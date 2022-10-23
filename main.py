@@ -53,7 +53,7 @@ def main():
     input_file = ""
     output_file = ""
     prosite_file = ""
-    database = ""
+    database = "swissprot"
     item = 0
 
     # Param parsing and setup
@@ -66,10 +66,12 @@ def main():
         elif item == 2 and args.query != None:
             input_file = file_param_to_file_name(str(args.query))
             output_file = generate_report_path(str(args.report), bool(args.local))
-            database = str(args.database)
-            if not database in ["swissprot", "nr"]:
-                print("[ERROR] Invalid database option. Must be swissprot or nr.")
-                exit(1)
+            # handle database if parameter was added
+            if args.database != None:
+                database = str(args.database)
+                if not database in ["swissprot", "nr"]:
+                    print("[ERROR] Invalid database option. Must be swissprot or nr.")
+                    exit(1)
 
         elif item == 3 and args.origin != None and args.compare != None and args.output != None:
             origin_sequence = args.origin
