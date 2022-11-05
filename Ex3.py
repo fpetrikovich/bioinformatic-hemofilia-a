@@ -2,6 +2,7 @@ import sys
 from Bio import pairwise2
 from Bio.pairwise2 import format_alignment
 from Bio import SeqIO
+from Bio.SubsMat import MatrixInfo 
 
 from constants import FASTA_TYPES
 from file_helper import valid_fasta_file, valid_output_file
@@ -22,8 +23,8 @@ def validate_params(input_file, species_list, output_file):
     exit(1)
 
 def perform_sequence_alignment(origin_file, species_list, output_file):
-    #original_file = sys.argv[1]
-    #output_file = sys.argv[-1]
+    # Use the Blosum62 matrix
+    matrix = MatrixInfo.blosum62
 
     original_sequence = list(SeqIO.parse(open(origin_file,'r'), 'fasta'))[0].seq
     sequences = []
@@ -33,7 +34,7 @@ def perform_sequence_alignment(origin_file, species_list, output_file):
     
     results = []
     for seq in sequences:
-        results.append(pairwise2.align.globalxx(original_sequence, seq))
+        results.append(pairwise2.align.globaldx(original_sequence, seq, matrix))
     
     output = open(f'{output_file}', 'w')
     for i in range(len(results)):

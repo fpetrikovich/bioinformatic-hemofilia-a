@@ -39,6 +39,11 @@ python main.py -e 4 -b sp_ORF1.report -p "mus musculus"
 ```
 Correra el ejercicio 4 con el reporte sp_ORF1.report viendo si encuentra el patron 
 musculus en las descripciones de los alineamientos.
+```
+python main.py -e 5 -seq genbank/NM_000132.4_sequence.gb
+```
+Corre el ejercicio 5. Utiliza la(s) secuencia(s) en el archivo genbank/NM_000132.4_sequence.gb para hallar los posibles orfs y realizar un análisis de los dominios de los orfs. Se generaran dos archivos de salida con el nombre por default: protein_orf.orf y protein_orf.patmatmotifs.
+
 
 ### Setup de Blast Local - Linux
 Descargarse el tar adecuado desde:
