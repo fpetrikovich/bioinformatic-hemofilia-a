@@ -31,10 +31,8 @@ def main():
     parser.add_argument('-r', '--report', help='Report output file',
                         type=str, default='myblast', required=False)
     ######################### Exercise 3 params #########################
-    parser.add_argument('-origin', '--origin', help='With origin file to compare',
+    parser.add_argument('-ss', '--sequences', help='File with fasta sequences to do MSA',
                         type=str, required=False)
-    parser.add_argument('-compare', '--compare', help='Files to compare',
-                        type=str, required=False, nargs='+')
     parser.add_argument('-out', '--output', help='Output file name',
                         type=str, required=False)
     ######################### Exercise 4 params #########################
