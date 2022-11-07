@@ -16,7 +16,7 @@ def run_exercise_5(input_path, orf_file, prosite_file):
     # Copy the file to the emboss dir to have it in the same folder as the script
     file_name = copy_input_to_emboss_dir(input_path)
     # Run the emboss script
-    run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, "400"])
+    run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, "2700"])
     # Delete the file we copied to the emboss dir to avoid duplicate files
     delete_file(EMBOSS_DIR + file_name)
 

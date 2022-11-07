@@ -71,8 +71,8 @@ def main():
                     print("[ERROR] Invalid database option. Must be swissprot or nr.")
                     exit(1)
 
-        elif item == 3 and args.origin != None and args.output != None:
-            origin_sequence = args.origin
+        elif item == 3 and args.sequences != None and args.output != None:
+            sequences = args.sequences
             output_file = MSA_OUTPUT_DIR +  args.output
 
         elif item == 4 and args.blast != None and args.pattern != None:
@@ -104,7 +104,7 @@ def main():
             run_exercise_2(input_file, output_file, bool(args.local), database)
         
         elif item == 3:
-            run_exercise_3(origin_sequence, output_file)
+            run_exercise_3(sequences, output_file)
 
         elif item == 4:
             run_exercise_4(input_file, args.pattern)

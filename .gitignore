@@ -137,6 +137,7 @@ ncbi-blast-2.13.0+
 reports/*
 pattern_hits/*
 msa/*
+MEGA/*
 emboss/*
 !emboss/*.sh
 !emboss/prosite.*
