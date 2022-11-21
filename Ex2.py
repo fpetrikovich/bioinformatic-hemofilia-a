@@ -2,7 +2,7 @@ import time
 
 from Bio.Blast import NCBIWWW, NCBIXML
 from file_helper import run_bash_file, save_file, create_bash_file
-from constants import EX1_OUTPUT_DIR, ALIGNMENT_HEADER
+from constants import EX1_OUTPUT_DIR, ALIGNMENT_HEADER, FASTA_EXTENSION
 
 E_VALUE_THRESHOLD = 0.04
 
@@ -57,7 +57,7 @@ def create_sequence_fasta_file(orf_index, sequence):
         sequence: sequence to add to the fasta file
 	Returns: Name of the file created
     """
-	orf_file_name = EX1_OUTPUT_DIR + "orfs/f8_protein_orf_" + orf_index + ".faa"
+	orf_file_name = EX1_OUTPUT_DIR + "orfs/f8_protein_orf_" + orf_index + FASTA_EXTENSION
 	save_file(orf_file_name, sequence)
 	return orf_file_name
 

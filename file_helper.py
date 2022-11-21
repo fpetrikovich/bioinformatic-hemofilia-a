@@ -42,10 +42,18 @@ def create_bash_file(file_name, command):
     f.close()
 
 def run_bash_file(file_name):
-    call(file_name, shell=True)
-
+    try:
+        call(file_name, shell=True)
+    except Exception as e:
+        print("[ERROR] Error while running bash script.\n[MESSAGE] " + str(e))
+        exit(1)
+        
 def run_bash_file_with_arguments(file_name, args):
-    call(['bash', file_name, *args])
+    try: 
+        call(['bash', file_name, *args])
+    except Exception as e:
+        print("[ERROR] Error while running bash script.\n[MESSAGE] " + str(e))
+        exit(1)
 
 def file_exists(file):
     return os.path.exists(file)
@@ -57,4 +65,8 @@ def valid_output_file(file):
   return file.split('.')[-1] in OUTPUT_TYPES
 
 def delete_file(path):
-    os.remove(path)
+    try:
+        os.remove(path)
+    except Exception as e:
+        print("[ERROR] Error while deleting file.\n[MESSAGE] " + str(e))
+        exit(1)

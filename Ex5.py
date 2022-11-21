@@ -14,7 +14,12 @@ def run_exercise_5(input_path, orf_file, prosite_file):
     de aminoácidos obtenidas y escribir los resultados en un archivo de salida.
     """
     # Copy the file to the emboss dir to have it in the same folder as the script
-    file_name = copy_input_to_emboss_dir(input_path)
+    try:
+        file_name = copy_input_to_emboss_dir(input_path)
+    except Exception as e:
+        print("[ERROR] Error while copying file to the emboss directory.\n[MESSAGE] " + str(e))
+        exit(1)
+        
     # Run the emboss script
     run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, "2700"])
     # Delete the file we copied to the emboss dir to avoid duplicate files
