@@ -20,37 +20,37 @@ def main():
 
     # Add arguments
     parser.add_argument('-e', '--exercise', required=True, help = 'exercise to run, can be 1 to 5.')          # Ejercicio para correr
-    parser.add_argument('-c', '--use_config', action='store_true', help='add this flag to use the config file')   # Si se debe usar el archivo de config o los parametros
-    parser.add_argument('-cf', '--config_file', help='name of the config file you want to use, configuration.ini by default',
+    parser.add_argument('-c', '--use_config', action='store_true', help='add this flag to use the config file.')   # Si se debe usar el archivo de config o los parametros
+    parser.add_argument('-cf', '--config_file', help='name of the config file you want to use, configuration.ini by default.',
                         type=str, default = CONFIG_FILE, required=False)
     ######################### Exercise 1 params #########################
-    parser.add_argument('-gb', '--' + EX1_GB, help='EX1: identifier of genbank input file',
+    parser.add_argument('-gb', '--' + EX1_GB, help='EX1: identifier of genbank input file.',
                         type=str, required=False)
     ######################### Exercise 2 params #########################
-    parser.add_argument('-db', '--' + EX2_DB, help='EX2: database to use for remote consults (swissprot or nr)',
+    parser.add_argument('-db', '--' + EX2_DB, help='EX2: database to use for remote consults. Can be swissprot (default) or nr.',
                         type=str, default='swissprot', required=False)
-    parser.add_argument('-q', '--' + EX2_QUERY, help='EX2: Identifier of fasta file to query',
+    parser.add_argument('-q', '--' + EX2_QUERY, help='EX2: Identifier of fasta file to query.',
                         type=str, required=False)
-    parser.add_argument('-l', '--' + EX2_LOCAL, action='store_true', help = 'EX2: Add if BLAST consult should be local.')
-    parser.add_argument('-r', '--' + EX2_REPORT, help='EX2: Report output file',
+    parser.add_argument('-l', '--' + EX2_LOCAL, action='store_true', help = 'EX2: Add if BLAST consult should be local. Will only use swissprot if so.')
+    parser.add_argument('-r', '--' + EX2_REPORT, help='EX2: Report output file, \'myblast\' by default.',
                         type=str, default='myblast', required=False)
     ######################### Exercise 3 params #########################
-    parser.add_argument('-ss', '--' + EX3_SEQS, help='EX3: File with fasta sequences to do MSA',
+    parser.add_argument('-ss', '--' + EX3_SEQS, help='EX3: File with fasta sequences to do MSA.',
                         type=str, required=False)
-    parser.add_argument('-out', '--' + EX3_OUT, help='EX3: Output file name',
+    parser.add_argument('-out', '--' + EX3_OUT, help='EX3: Output file name, \'msa_output.out\' by default.',
                         default = 'msa_output.out', type=str, required=False)
     ######################### Exercise 4 params #########################
-    parser.add_argument('-b', '--' + EX4_BLAST, help='EX4: Blast report file name to use as input',
+    parser.add_argument('-b', '--' + EX4_BLAST, help='EX4: Blast report file name to use as input.',
                         type=str, required=False)
-    parser.add_argument('-p', '--' + EX4_PATTERN, help='EX4: Pattern to find in description of blast report',
+    parser.add_argument('-p', '--' + EX4_PATTERN, help='EX4: Pattern to find in description of blast report.',
                         type=str, required=False)    
     ######################### Exercise 5 params #########################
-    parser.add_argument('-seq', '--' + EX5_SEQ, help='EX5: File with one or more nucleotide sequences',
+    parser.add_argument('-seq', '--' + EX5_SEQ, help='EX5: File with one or more nucleotide sequences.',
                         type=str, required=False)
-    parser.add_argument('-outseq', '--' + EX5_OUT, help='EX5: File where possible AA ORFs will be printed',
+    parser.add_argument('-outseq', '--' + EX5_OUT, help='EX5: File where possible AA ORFs will be printed, \'protein_orf\' by default.',
                         default = 'protein_orf', type=str, required=False)
-    parser.add_argument('-size', '--' + EX5_SIZE, help='EX5: Min size ORF can have',
-                        default=75, required=False)
+    parser.add_argument('-msize', '--' + EX5_SIZE, help='EX5: Min size ORF can have, 2700 by default.',
+                        default=2700, required=False)
 
     try:
         args = parser.parse_args()
@@ -102,7 +102,7 @@ def main():
             input_file = BLAST_REPORTS_DIR + args_to_use[EX4_BLAST]
         
         ###### EXERCISE 5 ARGUMENT HANDLING ######
-        elif item == 5 and args_to_use[EX5_SEQ] != None:
+        elif item == 5 and args_to_use[EX5_SEQ] != None and args_to_use[EX5_OUT] != None and args_to_use[EX5_SIZE] != None:
             output_file = args_to_use[EX5_OUT].split(".")[0]
             input_file = args_to_use[EX5_SEQ]
 

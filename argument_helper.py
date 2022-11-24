@@ -7,11 +7,11 @@ from constants import ARGUMENTS, CONFIG_DIR, CONFIG_DICT, EX1_GB, EX2_DB, EX2_QU
 def create_config(config_file, exercise):
     if not file_exists(CONFIG_DIR + config_file):
         exit_with_error("File %s does not exists in the %s directory." % (config_file, CONFIG_DIR))
-        
+
     config = configparser.ConfigParser()
     config.read(CONFIG_DIR + config_file)
     exercise_config = config[CONFIG_DICT[exercise]]
-    print(exercise_config)
+
     return exercise_config
 
 def handle_arguments(exercise, args):
