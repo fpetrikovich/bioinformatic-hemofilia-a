@@ -1,28 +1,9 @@
 import os.path
-from constants import FASTA_FILES, mRNA_GENBANK_FILES
 from subprocess import call
-from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR, GENBANK_DIR
+from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR, FILE_IDENTIFIERS, FOLDER_IDENTIFIERS
 
 def file_param_to_file_name(param):
-    file_names = {
-        "1A": mRNA_GENBANK_FILES.ISOFORM_A_PREPROTEIN.value,
-        "1B": mRNA_GENBANK_FILES.ISOFORM_B.value,
-        "2A": FASTA_FILES.ORFS_ISOFORM_A_PREPROTEIN.value,
-        "2B": FASTA_FILES.ORFS_ISOFORM_B.value,
-        "2AProtein": FASTA_FILES.ISOFORM_A_PREPROTEIN.value,
-        "2BProtein": FASTA_FILES.ISOFORM_B.value
-    }
-
-    folder_names = {
-        "1A": GENBANK_DIR,
-        "1B": GENBANK_DIR,
-        "2A": EX1_OUTPUT_DIR,
-        "2B": EX1_OUTPUT_DIR,
-        "2AProtein": EX1_OUTPUT_DIR,
-        "2BProtein": EX1_OUTPUT_DIR,
-    }
- 
-    return folder_names.get(param, "") + file_names.get(param, "")
+    return FOLDER_IDENTIFIERS.get(param, "") + FILE_IDENTIFIERS.get(param, "")
 
 def generate_output_path(filename):
     return EX1_OUTPUT_DIR + filename

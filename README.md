@@ -27,9 +27,9 @@ python main.py -e 1 -gb 1B
 ```
 Corre el ejercicio 1 con el archivo GenBank del mRNA, factor coagulador VIII isoform A prepotein.
 ```
-python3 main.py -e 2 -q 2A -r blast -l
+python3 main.py -e 2 -q 2A -r blast
 ```
-Corre el ejercicio 2 con el FASTA file de la proteina isoform A generada al correr el ejercicio 1, creando reportes para cada ORF al realizar consultas locales a BLAST. 
+Corre el ejercicio 2 con el FASTA file de la proteina isoform A generada al correr el ejercicio 1, creando reportes para cada ORF al realizar consultas online a BLAST usando la base de datos swissprot. 
 ```
 python main.py -e 3 -ss species/species_file.fasta -out ex3.out
 ```
