@@ -49,6 +49,7 @@ BLAST_REPORTS_DIR = "reports/"
 EMBOSS_DIR = "emboss/"
 GENBANK_DIR = "genbank/"
 MSA_OUTPUT_DIR = "msa/"
+CONFIG_DIR = "configuration_files/"
 
 ## FILE HANDLING CONSTANTS ##
 

@@ -1,14 +1,15 @@
 import configparser
 
+from error_helper import exit_with_error
 from file_helper import file_exists
-from constants import ARGUMENTS, CONFIG_DICT, EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
+from constants import ARGUMENTS, CONFIG_DIR, CONFIG_DICT, EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
 
 def create_config(config_file, exercise):
-    if not file_exists(config_file):
-        print("[ERROR] File %s does not exists in the root directory." % (config_file))
-        exit(1)
+    if not file_exists(CONFIG_DIR + config_file):
+        exit_with_error("File %s does not exists in the %s directory." % (config_file, CONFIG_DIR))
+        
     config = configparser.ConfigParser()
-    config.read(config_file)
+    config.read(CONFIG_DIR + config_file)
     exercise_config = config[CONFIG_DICT[exercise]]
     print(exercise_config)
     return exercise_config

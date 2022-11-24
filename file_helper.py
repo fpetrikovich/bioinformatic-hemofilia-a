@@ -1,6 +1,7 @@
 import os.path
 from subprocess import call
 from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR, FILE_IDENTIFIERS, FOLDER_IDENTIFIERS
+from error_helper import exit_with_error
 
 def file_param_to_file_name(param):
     return FOLDER_IDENTIFIERS.get(param, "") + FILE_IDENTIFIERS.get(param, "")
@@ -26,15 +27,13 @@ def run_bash_file(file_name):
     try:
         call(file_name, shell=True)
     except Exception as e:
-        print("[ERROR] Error while running bash script.\n[MESSAGE] " + str(e))
-        exit(1)
+        exit_with_error("Error while running bash script.", e)
         
 def run_bash_file_with_arguments(file_name, args):
     try: 
         call(['bash', file_name, *args])
     except Exception as e:
-        print("[ERROR] Error while running bash script.\n[MESSAGE] " + str(e))
-        exit(1)
+        exit_with_error("Error while running bash script.", e)
 
 def file_exists(file):
     return os.path.exists(file)
@@ -49,5 +48,4 @@ def delete_file(path):
     try:
         os.remove(path)
     except Exception as e:
-        print("[ERROR] Error while deleting file.\n[MESSAGE] " + str(e))
-        exit(1)
+        exit_with_error("Error while deleting file.", e)

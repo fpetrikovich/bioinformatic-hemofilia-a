@@ -1,6 +1,7 @@
 import shutil
 from constants import EMBOSS_DIR
 from file_helper import delete_file, run_bash_file_with_arguments
+from error_helper import exit_with_error
 
 EX5_SCRIPT = EMBOSS_DIR + "emboss_script.sh"
 
@@ -17,8 +18,7 @@ def run_exercise_5(input_path, orf_file, prosite_file, orf_minsize):
     try:
         file_name = copy_input_to_emboss_dir(input_path)
     except Exception as e:
-        print("[ERROR] Error while copying file to the emboss directory.\n[MESSAGE] " + str(e))
-        exit(1)
+        exit_with_error("Error while copying file to the emboss directory.", e)
         
     # Run the emboss script
     run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, str(orf_minsize)])

@@ -1,6 +1,7 @@
 from Bio import SeqIO, Entrez
 from constants import EX4_OUTPUT_DIR, ALIGNMENT_HEADER, EMAIL
 from file_helper import file_exists
+from error_helper import exit_with_error
 
 Entrez.email = EMAIL  # Always tell NCBI who you are
 
@@ -15,8 +16,7 @@ def run_exercise_4(blast_file, pattern):
     las secuencias originales completas de los hits seleccionados.
     """
     if not file_exists(blast_file):
-        print("[ERROR] Blast report file with path %s does not exists." % blast_file)
-        exit(1)
+        exit_with_error("Blast report file with path %s does not exists." % blast_file)
 
     f = open(blast_file, "r")
     spaceless_pattern = pattern.replace(' ', '_')
