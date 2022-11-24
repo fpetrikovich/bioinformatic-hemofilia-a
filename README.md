@@ -5,7 +5,9 @@
 Crear el entorno virtual con `virtualenv`:
 ```
 virtualenv .env
+```
 o
+```
 python3 -m venv "virtualenv"
 ```
 
@@ -105,7 +107,7 @@ Corre el ejercicio 5. Utiliza la(s) secuencia(s) en el archivo genbank/NM_000132
 
 ### Usando archivos de configuracion
 
-El archivo de configuracion tiene que estar en la carpeta configuration_files/ y debe ser de extension .ini.
+El archivo de configuracion tiene que estar en la carpeta configuration_files/ y debe ser de extension ".ini".
 
 Ahi, se pueden especificar valores default y valores por ejercicios. Los valores de cada ejercicio deben ir debajo de su header adecuado ([ex1], [ex2], etc.).
 
