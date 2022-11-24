@@ -1,6 +1,6 @@
 import os.path
 from subprocess import call
-from constants import FASTA_TYPES, OUTPUT_TYPES, EX1_OUTPUT_DIR, FILE_IDENTIFIERS, FOLDER_IDENTIFIERS
+from constants import FASTA_TYPES, BLAST_REPORTS_DIR, OUTPUT_TYPES, EX1_OUTPUT_DIR, FILE_IDENTIFIERS, FOLDER_IDENTIFIERS
 from error_helper import exit_with_error
 
 def file_param_to_file_name(param):
@@ -10,7 +10,12 @@ def generate_output_path(filename):
     return EX1_OUTPUT_DIR + filename
 
 def generate_report_path(filename, is_local = True):
-    return "reports/" + ("local_" if is_local else "") + filename
+    return BLAST_REPORTS_DIR + ("local_" if is_local else "") + filename
+
+def check_file_is_not_dir(filename):
+    length1 = len(filename.split('/'))
+    length2 = len(filename.split('\\'))
+    return length1 == 1 and length2 == 1
 
 def save_file(file_name, content): 
 	f = open(file_name, "w")

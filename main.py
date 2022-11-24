@@ -7,7 +7,7 @@ from Ex3 import run_exercise_3
 from Ex4 import run_exercise_4
 from Ex5 import run_exercise_5
 from argument_helper import print_curr_arguments, handle_arguments
-from file_helper import file_param_to_file_name, generate_output_path, generate_report_path
+from file_helper import check_file_is_not_dir, file_param_to_file_name, generate_output_path, generate_report_path
 from constants import CONFIG_FILE, MSA_OUTPUT_DIR, ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR
 from constants import EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
 from error_helper import exit_with_error
@@ -84,6 +84,9 @@ def main():
             if not args_to_use[EX2_QUERY] in ["2A", "2B", "2AProtein", "2BProtein"]:
                 exit_with_error("Invalid query identifier. Must be 2A, 2AProtein, 2B, or 2BProtein.")
 
+            if not check_file_is_not_dir(str(args_to_use[EX2_REPORT])):
+                exit_with_error("Report should be a filename, not a directory.")
+
             # Generate the input file name and the output file name
             input_file = file_param_to_file_name(str(args_to_use[EX2_QUERY]))
             output_file = generate_report_path(str(args_to_use[EX2_REPORT]).split(".")[0], bool(args_to_use[EX2_LOCAL]))
@@ -94,15 +97,21 @@ def main():
         
         ###### EXERCISE 3 ARGUMENT HANDLING ######
         elif item == 3 and args_to_use[EX3_SEQS] != None and args_to_use[EX3_OUT] != None:
+            if not check_file_is_not_dir(str(args_to_use[EX3_OUT])):
+                exit_with_error("Output file should be a filename, not a directory.")
+
             sequences = args_to_use[EX3_SEQS]
             output_file = MSA_OUTPUT_DIR + args_to_use[EX3_OUT]
 
         ###### EXERCISE 4 ARGUMENT HANDLING ######
         elif item == 4 and args_to_use[EX4_BLAST] != None and args_to_use[EX4_PATTERN] != None:
-            input_file = BLAST_REPORTS_DIR + args_to_use[EX4_BLAST]
+            input_file = args_to_use[EX4_BLAST]
         
         ###### EXERCISE 5 ARGUMENT HANDLING ######
         elif item == 5 and args_to_use[EX5_SEQ] != None and args_to_use[EX5_OUT] != None and args_to_use[EX5_SIZE] != None:
+            if not check_file_is_not_dir(str(args_to_use[EX5_OUT])):
+                exit_with_error("Output file should be a filename, not a directory.")
+
             output_file = args_to_use[EX5_OUT].split(".")[0]
             input_file = args_to_use[EX5_SEQ]
 
