@@ -4,7 +4,7 @@ from file_helper import delete_file, run_bash_file_with_arguments
 
 EX5_SCRIPT = EMBOSS_DIR + "emboss_script.sh"
 
-def run_exercise_5(input_path, orf_file, prosite_file):
+def run_exercise_5(input_path, orf_file, prosite_file, orf_minsize):
     """
     Escribir un script que llame a algún programa EMBOSS para que realice un análisis 
     sobre una secuencia de nucleótidos fasta (del Ej. 1). Por ejemplo, que calcule los
@@ -21,7 +21,7 @@ def run_exercise_5(input_path, orf_file, prosite_file):
         exit(1)
         
     # Run the emboss script
-    run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, "2700"])
+    run_bash_file_with_arguments(EX5_SCRIPT, [EMBOSS_DIR, file_name, orf_file, prosite_file, str(orf_minsize)])
     # Delete the file we copied to the emboss dir to avoid duplicate files
     delete_file(EMBOSS_DIR + file_name)
 

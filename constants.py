@@ -24,6 +24,7 @@ EX4_BLAST = "blast"
 EX4_PATTERN = "pattern"
 EX5_SEQ = "sequence"
 EX5_OUT = "outputseq"
+EX5_SIZE = "minsize"
 
 ARGUMENTS = {
     EX1_GB: None,
@@ -37,6 +38,7 @@ ARGUMENTS = {
     EX4_PATTERN: None,
     EX5_SEQ: None,
     EX5_OUT: None,
+    EX5_SIZE: None
 }
 
 ## DIRECTORY CONSTANTS ##
