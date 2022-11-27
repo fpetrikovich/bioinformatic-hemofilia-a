@@ -96,9 +96,9 @@ python main.py -e 3 -ss species/species_file.fasta -out ex3.out
 ```
 Corre el ejercicio 3 con el FASTA file generado en el ejercicio 1, y los compara con las especies resultantes del BLAST. 
 ```
-python main.py -e 4 -b reports/sp_ORF1.report -p "mus musculus"
+python main.py -e 4 -b reports/sp_SEQ1.report -p "mus musculus"
 ```
-Correra el ejercicio 4 con el reporte sp_ORF1.report viendo si encuentra el patron 
+Correra el ejercicio 4 con el reporte sp_SEQ1.report viendo si encuentra el patron 
 musculus en las descripciones de los alineamientos.
 ```
 python main.py -e 5 -seq genbank/NM_000132.4_sequence.gb

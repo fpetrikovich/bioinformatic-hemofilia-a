@@ -42,7 +42,7 @@ def run_blast_for_sequences(sequences, file_report, is_local, online_blast_db):
 			save_file(file_report + "_ORF" + str(index) + ".report", online_report)
 		
 		else:			
-			run_blast_offline_query(file_report + "_ORF" + str(index) + ".report", file_name, str(index))
+			run_blast_offline_query(file_report + "_SEQ" + str(index) + ".report", file_name, str(index))
 
 		index += 1
 

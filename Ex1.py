@@ -63,6 +63,7 @@ def find_start_stop_codons(nucleotides):
     start_idx = 0
     end_idx = 3
     found_start = False
+    coding_sections = []
     
     while end_idx < len(nucleotides):
         codon = nucleotides[start_idx:end_idx]
@@ -74,12 +75,20 @@ def find_start_stop_codons(nucleotides):
         else:
             if codon in END_CODONS:
                 final_end_idx = start_idx
-                break
+                coding_sections.append(nucleotides[final_start_idx:final_end_idx])
+                found_start = False
 
         start_idx = end_idx
         end_idx = end_idx + 3
 
-    return nucleotides[final_start_idx:final_end_idx]
+    max_length = 0
+    final_nucleotides = ""
+    for sec in coding_sections:
+        if len(sec) > max_length:
+            max_length = len(sec)
+            final_nucleotides = sec
+
+    return final_nucleotides
 
 
 def handle_new_open_reading_frame(orf_id, nucleotides, start_offset, is_reverse, orf_status, nucleotide_handle, protein_handle):
