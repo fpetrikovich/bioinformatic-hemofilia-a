@@ -10,7 +10,7 @@ from argument_helper import print_curr_arguments, handle_arguments
 from file_helper import check_file_is_not_dir, file_param_to_file_name, generate_output_path, generate_report_path
 from constants import CONFIG_FILE, MSA_OUTPUT_DIR, ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR
 from constants import EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
-from error_helper import exit_with_error
+from error_helper import exit_with_error, print_warning
 
 
 def main():
@@ -87,6 +87,9 @@ def main():
             if not check_file_is_not_dir(str(args_to_use[EX2_REPORT])):
                 exit_with_error("Report should be a filename, not a directory.")
 
+            if len(args_to_use[EX2_REPORT].split(".")) > 1:
+                print_warning("Report should be a filename with no dot (.). Do not include extension. Will remove what is behind the dot.")
+
             # Generate the input file name and the output file name
             input_file = file_param_to_file_name(str(args_to_use[EX2_QUERY]))
             output_file = generate_report_path(str(args_to_use[EX2_REPORT]).split(".")[0], bool(args_to_use[EX2_LOCAL]))
@@ -111,6 +114,8 @@ def main():
         elif item == 5 and args_to_use[EX5_SEQ] != None and args_to_use[EX5_OUT] != None and args_to_use[EX5_SIZE] != None:
             if not check_file_is_not_dir(str(args_to_use[EX5_OUT])):
                 exit_with_error("Output file should be a filename, not a directory.")
+            if len(args_to_use[EX5_OUT].split(".")) > 1:
+                print_warning("Output file should be a filename with no dot (.). Do not include extension. Will remove what is behind the dot.")
 
             output_file = args_to_use[EX5_OUT].split(".")[0]
             input_file = args_to_use[EX5_SEQ]

@@ -6,3 +6,7 @@ def exit_with_error(custom_msg = None, err = None):
         print("[ERROR][MESSAGE] %s" % str(err))
     
     exit(1)
+
+
+def print_warning(custom_msg):
+    print("[Warning] %s\n" % (custom_msg))
