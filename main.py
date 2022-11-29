@@ -9,7 +9,7 @@ from Ex5 import run_exercise_5
 from argument_helper import print_curr_arguments, handle_arguments
 from file_helper import check_file_is_not_dir, file_param_to_file_name, generate_output_path, generate_report_path
 from constants import CONFIG_FILE, MSA_OUTPUT_DIR, ORFS_FILE_SUFFIX, FASTA_EXTENSION, CORRECT_ORF_FILE_SUFFIX, BLAST_REPORTS_DIR
-from constants import EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
+from constants import EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_MATRIX, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
 from error_helper import exit_with_error, print_warning
 
 
@@ -39,6 +39,8 @@ def main():
                         type=str, required=False)
     parser.add_argument('-out', '--' + EX3_OUT, help='EX3: Output file name, \'msa_output.out\' by default.',
                         default = 'msa_output.out', type=str, required=False)
+    parser.add_argument('-pwm', '--' + EX3_MATRIX, help='EX3: Protein weight matrix to use for MSA (BLOSUM, PAM, GONNET, ID)',
+                        default = 'GONNET', type=str, required=False)
     ######################### Exercise 4 params #########################
     parser.add_argument('-b', '--' + EX4_BLAST, help='EX4: Blast report file name to use as input.',
                         type=str, required=False)
@@ -61,6 +63,7 @@ def main():
         output_file = ""
         prosite_file = ""
         database = "swissprot"
+        pwmatrix = "GONNET"
         args_to_use = handle_arguments(item, args)
 
     except Exception as e:
@@ -102,7 +105,13 @@ def main():
         elif item == 3 and args_to_use[EX3_SEQS] != None and args_to_use[EX3_OUT] != None:
             if not check_file_is_not_dir(str(args_to_use[EX3_OUT])):
                 exit_with_error("Output file should be a filename, not a directory.")
-
+            
+            if args_to_use[EX3_MATRIX] != None:
+                if not args_to_use[EX3_MATRIX].upper() in ["BLOSUM", "PAM", "GONNET", "ID"]:
+                    exit_with_error("Invalid protein weight matrix. Must be PAM, BLOSUM, GONNET or ID.")
+                
+                pwmatrix = args_to_use[EX3_MATRIX].upper()
+            
             sequences = args_to_use[EX3_SEQS]
             output_file = MSA_OUTPUT_DIR + args_to_use[EX3_OUT]
 
@@ -143,7 +152,7 @@ def main():
             run_exercise_2(input_file, output_file, bool(args_to_use[EX2_LOCAL]), database)
         
         elif item == 3:
-            run_exercise_3(sequences, output_file)
+            run_exercise_3(sequences, output_file, pwmatrix)
 
         elif item == 4:
             run_exercise_4(input_file, args_to_use[EX4_PATTERN])

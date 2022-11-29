@@ -2,7 +2,7 @@ import configparser
 
 from error_helper import exit_with_error
 from file_helper import file_exists
-from constants import ARGUMENTS, CONFIG_DIR, CONFIG_DICT, EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
+from constants import ARGUMENTS, CONFIG_DIR, CONFIG_DICT, EX1_GB, EX2_DB, EX2_QUERY, EX2_LOCAL, EX2_REPORT, EX3_SEQS, EX3_OUT, EX3_MATRIX, EX4_BLAST, EX4_PATTERN, EX5_OUT, EX5_SEQ, EX5_SIZE
 
 def create_config(config_file, exercise):
     if not file_exists(CONFIG_DIR + config_file):
@@ -35,6 +35,7 @@ def handle_arguments(exercise, args):
         arguments[EX2_REPORT] = args.report
         arguments[EX3_SEQS] = args.sequences
         arguments[EX3_OUT] = args.output
+        arguments[EX3_MATRIX] = args.pwmatrix
         arguments[EX4_BLAST] = args.blast
         arguments[EX4_PATTERN] = args.pattern
         arguments[EX5_SEQ] = args.sequence
@@ -56,6 +57,7 @@ def print_curr_arguments(exercise, arguments):
     if exercise == 3:
         print('\t - %s : %s' % (EX3_SEQS, arguments[EX3_SEQS]))
         print('\t - %s : %s' % (EX3_OUT, arguments[EX3_OUT]))
+        print('\t - %s : %s' % (EX3_MATRIX, arguments[EX3_MATRIX]))
     if exercise == 4:
         print('\t - %s : %s' % (EX4_BLAST, arguments[EX4_BLAST]))
         print('\t - %s : %s' % (EX4_PATTERN, arguments[EX4_PATTERN]))

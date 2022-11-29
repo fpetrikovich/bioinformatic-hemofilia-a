@@ -20,6 +20,7 @@ EX2_LOCAL = "local"
 EX2_REPORT ="report"
 EX3_SEQS = "sequences"
 EX3_OUT = "output"
+EX3_MATRIX = "pwmatrix"
 EX4_BLAST = "blast"
 EX4_PATTERN = "pattern"
 EX5_SEQ = "sequence"
@@ -34,6 +35,7 @@ ARGUMENTS = {
     EX2_REPORT: None,
     EX3_SEQS: None,
     EX3_OUT: None,
+    EX3_MATRIX: None,
     EX4_BLAST: None,
     EX4_PATTERN: None,
     EX5_SEQ: None,

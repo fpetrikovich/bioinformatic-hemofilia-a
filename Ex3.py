@@ -12,14 +12,14 @@ def validate_params(input_file, output_file):
   if not valid_output_file(output_file):
     exit_with_error("Output file must be .txt | .output | .out")
 
-def perform_sequence_alignment(input_file, output_file):
+def perform_sequence_alignment(input_file, output_file, pwmatrix):
     bash_file = MSA_OUTPUT_DIR + "command.sh"
-    clustalw_cline = ClustalwCommandline("clustalw", pwmatrix="BLOSUM", infile=input_file, outfile=output_file, pwgapext=0.1, pwgapopen=10, gapext=0.2, gapopen=10)
+    clustalw_cline = ClustalwCommandline("clustalw", pwmatrix=pwmatrix, infile=input_file, outfile=output_file, pwgapext=0.1, pwgapopen=10, gapext=0.2, gapopen=10)
     print(clustalw_cline)
     create_bash_file(bash_file, str(clustalw_cline))
     run_bash_file(bash_file)
     
-def run_exercise_3(origin_file, output_file):
+def run_exercise_3(origin_file, output_file, pwmatrix):
     validate_params(origin_file, output_file)
-    perform_sequence_alignment(origin_file, output_file)
+    perform_sequence_alignment(origin_file, output_file, pwmatrix)
     print("MSA successfully completed. ")
