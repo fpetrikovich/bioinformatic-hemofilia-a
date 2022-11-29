@@ -94,7 +94,7 @@ Corre el ejercicio 2 con el FASTA file de la proteina isoform A generada al corr
 ```
 python main.py -e 3 -ss species/species_file.fasta -out ex3.out
 ```
-Corre el ejercicio 3 con el FASTA file generado en el ejercicio 1, y los compara con las especies resultantes del BLAST. 
+Corre el ejercicio 3 con el FASTA file generado en el ejercicio 1, y los compara con las especies resultantes del BLAST. Genera un MSA con las secuencias utilizando la matriz default GONNET (puede agregarse -pwm <matrix> para cambiar la misma).
 ```
 python main.py -e 4 -b reports/sp_SEQ1.report -p "mus musculus"
 ```
